@@ -1,0 +1,57 @@
+The following is an example of how to read and use the 90prime Galil
+routines API.
+
+In this example consider the routine #FILTMOV.  The API entry for
+this routine is given as:
+
+******************************************************************
+
+-----------------------------------------------------
+#FILTMOV
+-----------------------------------------------------
+                                                                                
+Input Variables:
+REQFILT - the filter holder number to rotate to.  The default is 256 which
+does not exist on any of the filter holders.
+                                                                                
+Output Variables:
+ERRFILT - if the filter is not found in 5 moves this variable is set to 1.
+                                                                                
+Subroutines Called:
+FILTROT
+                                                                                
+Description:
+FILTMOV rotates the filter wheel until the current filter (FILTVAL) equals
+the requested value REQFILT.  The filter wheel will rotate a maximum
+number of 5 positions before returning a ERRFILT=1 and stopping.
+                                                                                
+*******************************************************************
+
+To us the routine FILTMOV the user must first set the variable REQFILT.
+This variable is the number on the filter holder to rotate the filter wheel
+to.  The default power-up value for REQFILT is given in the Galil Variables
+document as 256.  Since there are only 255 possible filter numbers 
+256 represents no filter requested.
+
+It is assumed that user knows how to "send a command to the Galil"
+and the directions for doing so are discussed elsewhere.
+
+XQ is the Galil command to execute a routine.  So to set REQFILT to 5 and
+then move to that position send the following commands to the Galil:
+
+	REQFILT=5
+	XQ #FILTMOV
+
+These could be sent as two separate commands as above or as one command
+separated by a semicolon:
+
+	REQFILT=5;XQ #FILTMOV
+
+After the move is complete one could check whether there was an error
+in finding the filter, i.e. did the filter wheel move 5 positions
+without finding the filter number?  Querying for the output variable, 
+ERRFILT in this case, is done by sending the following to the Galil:
+
+	MG ERRFILT
+
+and then listening for the response. 

@@ -1,0 +1,113 @@
+From edo@as.arizona.edu Fri Jan  4 14:48:13 2002
+Date: Fri, 30 Mar 2001 11:49:07 -0700 (MST)
+From: E. Olszewski <edo@as.arizona.edu>
+To: ggwilli@as.arizona.edu
+Subject: lens 3
+
+here's what i'm finding in old email
+
+3 May 2000
+I stoned out the chingus on the flat side of lens 3 also.  It's ugly but
+it's small.
+THE ABOVE IS FROM STEVE MILLER
+
+
+Below is from Jim Burge April 3 2000
+Ed,
+
+The flat surface on lens 3 was damaged in processing.  There is a 1/8 inch
+ding in the surface about 1.8 inches from the edge.  I see 3 options:
+
+1.  Start over.  The substrate cost around $2k.  There are a couple weeks
+work getting the lens to where it is now.  Both surfaces polished, but final
+figuring not complete.
+
+2.  Live with it.  The thing could be ground out to about 3 mm diameter.
+The beam for a single field point is 88 mm in diameter.  The clear aperture
+for the lens is 240 mm.  The ding would act like a bubble, scattering light
+out of 0.22% of the light out of any image that falls on it.  It would be
+completely out of focus in the detector plane, but it could reduce contrast
+across the field if a bright star hits it.  It could be painted black to
+minimize this.
+Unless you need photometric quality better than 1%, I recommend that we
+simply grind this out and paint it black.
+
+3.  Reduce the thickness of the optic by enough to grind through this.  The
+edge thickness of the 260 mm diameter lens is already only 12 mm.  We would
+have to reduce it by 2-3 mm, which gets pretty small.  Warren could look at
+the deflections of the lens.
+
+Jim
+
+--------------------------------------------------------------------------
+
+Date: Mon, 3 Apr 2000 12:59:11 -0700 (MST)
+From: John Hill <hill@as.arizona.edu>
+To: edo@as.arizona.edu
+Subject: Re: the text that magically didn't get pasted (90prime)
+Cc: hill@as.arizona.edu
+
+Either option 1 or option 2 seems OK to me.
+I wouldn't thin the lens more.
+
+--------------------------------------------------------------------------
+
+Date: Mon, 3 Apr 2000 13:35:01 -0700 (MST)
+From: Gary Schmidt <schmidt@as.arizona.edu>
+Message-Id: <200004032035.NAA15374@chinadoll.as.arizona.edu>
+To: edo@as.arizona.edu
+Subject: Re: the text that magically didn't get pasted (90prime)
+X-Sun-Charset: US-ASCII
+Content-Length: 285
+Status: RO
+
+
+Ed-
+
+My opinion is to live with it and paint it black.
+
+Gary
+
+---------------------------------------------------------------------------
+
+From Tuell@optics.Arizona.EDU Fri Jan  4 14:48:42 2002
+Date: Fri, 30 Mar 2001 11:13:29 -0700
+From: Michael Tuell <Tuell@optics.Arizona.EDU>
+To: 'G. Grant Williams ' <ggwilli@compton.as.arizona.edu>
+Subject: RE: Lens 3.
+
+ Grant,
+
+Yes, the hole is in the glass.
+
+It happened during fabrication.  It was probably the pin slipping out of the
+tooling and impacting the surface.  The hole is about 1.75" from the edge,
+3/32" across and 1/32" deep.  It appears to have been drilled out after the
+damage occured.
+
+Mike
+
+-------------------------------------------------------------------------
+
+From: Michael Tuell <Tuell@optics.Arizona.EDU>
+To: "'E. Olszewski '" <edo@as.arizona.edu>
+Subject: RE: ding in lens 3?
+Date: Fri, 30 Mar 2001 11:12:05 -0700
+
+ Ed,
+
+It is a hole in the glass that happened during fabrication.  It was probably
+the pin slipping out of the tooling and impacting the surface.  The hole is
+about 1.75" from the edge, 3/32" across and 1/32" deep.  It appears to have
+been drilled out after the damage occured.
+
+Mike Tuell
+
+-----Original Message-----
+From: E. Olszewski
+To: tuell@optics.arizona.edu
+Sent: 3/29/01 10:52 AM
+Subject: ding in lens 3?
+
+what did you and Steve Miller note/decide about the ding?
+

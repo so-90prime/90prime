@@ -1,0 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+
+Ed -
+
+   The attached tarfile contains ASCII and postscript versions of the 90prime
+spectral response functions for the 5 broadband filters, UBVRI, and 3 other
+filters (SDSS u and z, and Washington M) for which the manufacturer had sent
+electronic version of the filter trace.  They're intended to be
+self-explanatory, so please let me know where I failed to do that and I'll fix
+'em.  Thanks.
+
+Chad
+
+- --
+Dr. Charles Engelbracht           cengelbracht@as.arizona.edu
+MIPS Instrument Scientist         OFFICE:  (520) 626-9184
+Steward Observatory               CELL:  (520) 838-1992
+Tucson, AZ 85721                  FAX:  (520) 621-9555
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+Comment: Using GnuPG with Fedora - http://enigmail.mozdev.org
+
+iD4DBQFJv/YxipWVljYNYaYRAuzQAKDJ9JVcKj/By7mxO5NowtBQbansQgCXSpN5
+9K1AsAmA0OBR5W1TKTJLeg==
+=cpD2
+-----END PGP SIGNATURE-----

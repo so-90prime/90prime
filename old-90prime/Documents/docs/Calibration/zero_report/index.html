@@ -1,0 +1,135 @@
+<html>
+<head><title>90prime bias images</title></head>
+<body>
+
+<h1>90prime Bias Images in May/June 2004</h1>
+<p> C. W. Engelbracht; last updated 2004-7-2 </p>
+
+<h2>All Bias Images</h2>
+
+<p> Each panel of the table below shows the 25 bias (zero) images obtained
+during the May 2004 90prime run or the 20 images obtained during the June 2004
+run, one chip per panel as indicated along the top row.  The top ten images in
+the May panels are from May 9, the middle 5 from May 10, and the bottom 10
+from May 11.  The top 10 images in the June panels are from June 20 while the
+bottom 10 are from June 21.  The overscan subtraction method is summarized in
+the second column. </p>
+
+<table align="center" border="1" cellpadding="5" cellspacing="2">
+<tr>
+<td bgcolor="#cccccc"> Date </td>
+<td bgcolor="#cccccc"> Overscan Subtraction Method </td>
+<td bgcolor="#cccccc"> display range </td>
+<td bgcolor="#cccccc"> Chip 1 </td>
+<td bgcolor="#cccccc"> Chip 2 </td>
+<td bgcolor="#cccccc"> Chip 3 </td>
+<td bgcolor="#cccccc"> Chip 4 </td>
+</tr>
+<tr>
+<td> May 2004 </td>
+<td> <p>none</p> </td>
+<td> <p> 900 - 1100 </p> </td>
+<td><a href="no_overscan_1.gif"><img src="no_overscan_1_small.gif"></a></td>
+<td><a href="no_overscan_2.gif"><img src="no_overscan_2_small.gif"></a></td>
+<td><a href="no_overscan_3.gif"><img src="no_overscan_3_small.gif"></a></td>
+<td><a href="no_overscan_4.gif"><img src="no_overscan_4_small.gif"></a></td>
+</tr>
+<tr>
+<td> May 2004 </td>
+<td> <p>median of whole region</p> </td>
+<td> <p> -30 - 30 </p> </td>
+<td><a href="median_1.gif"><img src="median_1_small.gif"></a></td>
+<td><a href="median_2.gif"><img src="median_2_small.gif"></a></td>
+<td><a href="median_3.gif"><img src="median_3_small.gif"></a></td>
+<td><a href="median_4.gif"><img src="median_4_small.gif"></a></td>
+</tr>
+<tr>
+<td> May 2004 </td>
+<td> <p>cubic spline fit along column</p> </td>
+<td> <p> -30 - 30 </p> </td>
+<td><a href="spline3_1.gif"><img src="spline3_1_small.gif"></a></td>
+<td><a href="spline3_2.gif"><img src="spline3_2_small.gif"></a></td>
+<td><a href="spline3_3.gif"><img src="spline3_3_small.gif"></a></td>
+<td><a href="spline3_4.gif"><img src="spline3_4_small.gif"></a></td>
+</tr>
+<tr>
+<td> May 2004 </td>
+<td> <p>median of each row</p> </td>
+<td> <p> -30 - 30 </p> </td>
+<td><a href="rows_1.gif"><img src="rows_1_small.gif"></a></td>
+<td><a href="rows_2.gif"><img src="rows_2_small.gif"></a></td>
+<td><a href="rows_3.gif"><img src="rows_3_small.gif"></a></td>
+<td><a href="rows_4.gif"><img src="rows_4_small.gif"></a></td>
+</tr>
+<tr>
+<td> June 2004 </td>
+<td> <p>cubic spline fit along column</p> </td>
+<td> <p> -50 - 50 </p> </td>
+<td><a href="june04-panel1.gif"><img src="june04-panel1_small.gif"></a></td>
+<td><a href="june04-panel2.gif"><img src="june04-panel2_small.gif"></a></td>
+<td><a href="june04-panel3.gif"><img src="june04-panel3_small.gif"></a></td>
+<td><a href="june04-panel4.gif"><img src="june04-panel4_small.gif"></a></td>
+</tr>
+</table>
+
+<h2>Observed Behavior</h2>
+
+<ul>
+
+   <li>the overall bias level changes from night to night (contrast the first
+two rows of each panel in row 1 of the table with the last three rows of each
+panel)
+
+   <li>the bias level often has a gradient in the column direction that
+changes from night to night that will not be removed with a simple median
+overscan subtraction (most clearly seen in chips 1 and 2 in row 2 of the table
+- contrast the first two rows of those panels with the last 3 rows)
+
+   <li>the bias level sometimes displays an abrubt transition along columns
+(see the first image for chip 2 in the second row of the table - a column plot
+of the right half of that image is shown in Figure 1)
+
+   <li>the bias level sometimes displays broad (~800 pixels) features along
+rows at a low (~ 1 ADU) level (contrast the first two rows of the chip 1 panel
+in the third row of the table with the last three rows - a column plot of the
+image in the last column and middle row of that panel is shown in Figure 2)
+
+   <li>the overall bias level increased (e.g., by a factor of ~2.5 on chip 1)
+between May and June
+
+   <li>the difference between amplifiers increased (e.g., from 1 ADU to 7 ADU
+on chip 1) between May and June
+
+</ul>
+
+<p> Figure 1 <br> <img src="jump.gif"> </p>
+<p> Figure 2 <br> <img src="bands.gif"> </p>
+
+<h2> Conclusions </h2>
+
+<ul>
+   <li> overscan subtraction is necessary to track changes in the bias level
+   <li> a low-order fit to the overscan region is necessary to remove
+structure in the bias level
+</ul>
+
+<p> The final combined bias (zero) images are shown in Figure 3, with chips 3
+and 4 on the top and chips 1 and 2 on the bottom.  These images were created
+using a cubic spline fit to the overscan region and are plotted with the same
+display range of -50 to 50. </p>
+
+<table align="center" border="1" cellpadding="5" cellspacing="2">
+<tr><td colspan=2 bgcolor="#bbbbbb" align=center>Figure 3</td></tr>
+<tr>
+<td bgcolor="#dddddd" align=center>May 2004</td>
+<td bgcolor="#dddddd" align=center>June 2004</td>
+</tr>
+<tr>
+<td align=center><a href="90prime_zero_2004-05.gif"><img src="90prime_zero_2004-05.gif" height=200 width=200></a></td>
+<td align=center><a href="90prime_zero_2004-06.gif"><img src="90prime_zero_2004-06.gif" height=200 width=200></a></td>
+</tr>
+</table>
+
+
+</body>
+</html>

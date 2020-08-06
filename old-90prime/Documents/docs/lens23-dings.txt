@@ -1,0 +1,70 @@
+From edo@as.arizona.edu Fri Jan  4 15:04:44 2002
+Date: Fri, 7 Dec 2001 11:05:25 -0700 (MST)
+From: E. Olszewski <edo@as.arizona.edu>
+To: ggwilli@as.arizona.edu
+Subject: what i just sent to cambridge and to chile
+
+>From edo Fri Dec  7 11:04:32 2001
+Date: Fri, 7 Dec 2001 11:04:29 -0700 (MST)
+From: "E. Olszewski" <edo>
+To: awalker@noao.edu
+Cc: bmcleod@cfa.harvard.edu, edo
+Subject: my prime focus camera for Steward 2.3m
+
+Alistair,
+
+.
+.
+.
+
+You can see the optical layout at 
+http://compton.as.arizona.edu/90prime/pictures/optics/optics7.gif
+
+So the new chip and ding are on L2. the old ding, again from a tool
+being dropped, is on L3, and 
+"It is a hole in the glass that happened during fabrication.  It was probably
+the pin slipping out of the tooling and impacting the surface.  The hole is
+about 1.75" from the edge, 3/32" across and 1/32" deep.  It appears to have
+been drilled out after the damage occured."
+
+the chip is 
+"I have evaluated the chip in L2 and recommend that we proceed with the part,
+then paint the area black before installing the lens.
+The chip is big and ugly, but the area it extends into the clear aperture is
+only about 8 mm across.  The beam is 200 mm across here, so worst case, it
+affects 0.16%.
+In fact, we can do much better then this.  If we clock the chip so that it
+is oriented along the sides (not the corners) of the filters and the CCD,
+then it will never be seen by the focal plane.  We do need to make sure that
+we do NOT put it on the side of the guider."
+
+the ding in L2 is
+"This morning it was reported that  we suffered additional damage on the =
+L2 spherical surface.  This time it was Dean and he pinged the surface =
+with the drive pin while adjusting it for a polishing run.  It is a =
+small (~1mm diam) on the surface near the center.  It has also a typical =
+conical fracture that extends into the depth of the glass probably more =
+than a mm but is difficult to quantify since the fracture edge is not =
+easily seen. =20
+Jim was over here this morning and he and I examined it closely.  Jim's =
+opinion is that the defect itself is small enough to ignore.  Typically, =
+we would grind out the fracture as we did for L3 but I am reluctant to =
+carve a hole in the surface  since it will increase the size of the =
+unusable area.  We were concerned over the possibility that the fracture =
+may propagate so we looked at it under crossed polarizers and can detect =
+virtually no stress birefringence.  So it is unlikely that the fracture =
+will propagate.  However, if the coating temperature is very high it may =
+make the fracture move.=20
+Jim suggested I speak with the coating vendor to determine what the =
+optic will be subjected to in coating so I would like the contact =
+information for the coater from you along with some way to identify the =
+coating to the vendor so he knows which one I'm talking about.
+"
+
+.
+.
+.
+
+thanks
+
+edo

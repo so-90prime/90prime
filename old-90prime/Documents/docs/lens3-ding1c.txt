@@ -1,0 +1,33 @@
+From edo@as.arizona.edu Fri Jan  4 14:49:21 2002
+Date: Fri, 30 Mar 2001 11:19:19 -0700 (MST)
+From: E. Olszewski <edo@as.arizona.edu>
+To: 90prime@as.arizona.edu
+Subject: from Mike Tuell
+
+>From Tuell@optics.Arizona.EDU Fri Mar 30 11:12:12 2001
+From: Michael Tuell <Tuell@optics.Arizona.EDU>
+To: "'E. Olszewski '" <edo@as.arizona.edu>
+Subject: RE: ding in lens 3?
+Date: Fri, 30 Mar 2001 11:12:05 -0700
+MIME-Version: 1.0
+
+ Ed,
+
+It is a hole in the glass that happened during fabrication.  It was probably
+the pin slipping out of the tooling and impacting the surface.  The hole is
+about 1.75" from the edge, 3/32" across and 1/32" deep.  It appears to have
+been drilled out after the damage occured.
+
+.
+.
+.
+
+Mike Tuell
+
+-----Original Message-----
+From: E. Olszewski
+To: tuell@optics.arizona.edu
+Sent: 3/29/01 10:52 AM
+Subject: ding in lens 3?
+
+what did you and Steve Miller note/decide about the ding?

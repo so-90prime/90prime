@@ -1,0 +1,38 @@
+From edo@as.arizona.edu Fri Jan  4 15:05:11 2002
+Date: Fri, 7 Dec 2001 11:29:08 -0700 (MST)
+From: E. Olszewski <edo@as.arizona.edu>
+To: ggwilli@as.arizona.edu
+Subject: from burge
+
+>From JBurge@optics.Arizona.EDU Fri Dec  7 11:22:22 2001
+From: Jim Burge <JBurge@optics.Arizona.EDU>
+To: "'E. Olszewski'" <edo@as.arizona.edu>
+Subject: RE: L2 and L3 dings
+Date: Fri, 7 Dec 2001 11:22:11 -0700 
+MIME-Version: 1.0
+
+Here is a brief explanation of the basic effects of small dings...
+
+The 2 mm ding is tiny compared with the 200 mm beam from a single star.  For
+each star, the ding does 2 bad things:
+1. Scatters light out of the image making it dimmer by an amount 
+	2(Ading/Abeam)^2 = 0.02%.  This loss will be present for all of the
+stars, and it is so tiny you will never see this effect.
+
+2.  Half of his light is absorbed, the other half is scattered.  So each
+star will spread 0.01% of its light all over angles roughly lambda/Dding.  1
+mrad.  the place.  This increases your background slightly.  The lens is
+roughly 700 mm from the focal plane, so each star will have a ghost halo,
+about 175 um wide with 0.01% of the light in it.  0.5 arcsec images, the
+images are 17 um.  The ghost will be about 0.0001% as bright as its star.
+You will not be able to see it unless your detector has dynamic range of
+1000000:1 or 20 bits.
+
+For 1 arcsec images, this ratio is of course 4 times worse 18 bits.
+
+Where these can hurt you most is obviously for very high contrast
+observations.  
+
+I hope this helps.
+
+Jim

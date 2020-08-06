@@ -1,0 +1,552 @@
+The following is a list of routines which are burned into the 90prime
+Galil's non-volatile eeprom.  The routines are followed by a short
+explanation of how they are called. 
+
+Updated:	11/02/03 GGW
+		12/29/03 GGW
+
+Note: Updated does not necessarily mean up-to-date.
+
+Routines:
+These can be queried with the LL (List Labels) Galil command.
+Note that not all labels correspond to routines some are simply line
+labels.  The LL command will also give the line number of the label.
+
+-----------------------------------------------------
+#AUTO
+-----------------------------------------------------
+
+Input Variables:
+None
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The AUTO routine is the routine which gets executed when the Galil is 
+powered on.  It sets the parameters for each axis.
+
+-----------------------------------------------------
+#CENTER
+-----------------------------------------------------
+
+Input Variables:
+CENTER - number of steps to center the guide filter in the beam.
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The CENTER routine nudges the guide filter wheel to align the filter
+with the aperature.  This is necessary because the filter wheel positions
+defined by the sensors are not exactly aligned with the aperture.
+
+-----------------------------------------------------
+#CONVERT
+-----------------------------------------------------
+
+Input Variables:
+FNUM_IN - filter number input by the user.
+
+Output Variables:
+SNUM_IN - filter position of FNUM_IN
+
+Subroutines Called:
+None
+
+Description:
+The CONVERT routine converts the filter requested by the user to the
+position of that filter in the wheel.
+
+-----------------------------------------------------
+#COORDMV
+-----------------------------------------------------
+
+Input Variables:
+DISTALL - the number of steps to move all the actuators.
+
+Output Variables:
+None
+
+Subroutines Called:
+FOCSTUP
+
+Description:
+The COORDMV routine moves all the focus actuators in a coordinated 
+fashion an amount of DISTALL.
+
+-----------------------------------------------------
+#FILTIN
+-----------------------------------------------------
+
+Input Variables:
+FILTTDIST - the number of steps to move the filter in translation to 
+put it in the beam.
+
+Output Variables:
+FILTISIN - a flag indicating if the FILTIN or FILTOUT routines have been 
+run. 
+FILTTSC -  a stop code indicating how the filter translation stopped.
+If the translation stops by a forward limit this is set to 2.
+If the translation stops by a reverse limit this is set to 3.
+
+Subroutines Called:
+FILTTSU
+
+Description:
+The FILTIN routine moves a filter into the beam.  It moves the filter
+a default number of steps FILTDIST.
+
+-----------------------------------------------------
+#FILTLD
+-----------------------------------------------------
+
+Input Variables:
+None
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The FILTLD routine move the filter wheel to the next filter load position.
+
+-----------------------------------------------------
+#FILTMOV
+-----------------------------------------------------
+
+Input Variables:
+REQFILT - the filter holder number to rotate to.  The default is 256 which
+does not exist on any of the filter holders.
+
+Output Variables:
+ERRFILT - if the filter is not found in 5 moves this variable is set to 1.
+
+Subroutines Called:
+FILTROT
+
+Description:
+FILTMOV rotates the filter wheel until the current filter (FILTVAL) equals
+the requested value REQFILT.  The filter wheel will rotate a maximum 
+number of 5 positions before returning a ERRFILT=1 and stopping.
+
+-----------------------------------------------------
+#FILTLDM
+-----------------------------------------------------
+
+Input Variables:
+None
+
+Output Variables:
+None
+
+Subroutines Called:
+FILTLD
+
+Description:
+The FILTLDM routine is used for loading filters into the filter wheel.  It
+waits for the load button on the instrument to be depressed using the 
+AL H (arm latch H) command and then runs the FILTLD routine to rotate
+to the next load position.
+
+-----------------------------------------------------
+#FILTOUT
+-----------------------------------------------------
+
+Input Variables:
+FILTTDIST - the number of steps to move the filter in translation to 
+pull it out of the beam.
+FILTNUD - the number of steps to jog the pusher arm toward the center
+after it has reached the reverse limit.  This is necessary to free the
+pusher arm for rotation.
+
+Output Variables:
+FILTISIN - a flag indicating if the FILTIN or FILTOUT routines have been 
+run. 
+FILTTSC -  a stop code indicating how the filter translation stopped.
+If the translation stops by a forward limit this is set to 2.
+If the translation stops by a reverse limit this is set to 3.
+
+Subroutines Called:
+FILTTSU
+
+Description:
+The FILTOUT routine moves a filter out of the beam.  It moves the filter
+a default number of steps FILTDIST.  When the revers limit is reached it
+jogs the pusher arm back toward the center slightly to clear it for 
+rotation.
+
+-----------------------------------------------------
+#FILTRD
+-----------------------------------------------------
+
+Input Variables:
+None
+
+Output Variables:
+FILTVALS[6] - an array of filter codes which are read from the holders.
+
+Subroutines Called:
+FILTROT
+
+Description:
+The FILTRD routine reads each of the filter holder codes and saves them to
+an array.  This is used for initializing the filter wheel.
+
+-----------------------------------------------------
+#FILTROT
+-----------------------------------------------------
+
+Input Variables:
+NROT - number of positions to rotate the filter wheel. (0 - 6)
+
+Output Variables:
+FILTBIT[1-8] - the value of the individual bits in the filter holder code.
+FILTLOW - the value of the least significant nibble of the filter holder code.
+FILTHIGH - the value of the most significant nibble of the filter holder code.
+FILTVAL - the value of the whole byte of the filter holder code.
+
+Subroutines Called:
+FILTRSU
+
+Description:
+The FILTROT routine rotates the filter wheel by NROT positions.  After the 
+motion is complete it records the current filter holder code.
+
+-----------------------------------------------------
+#FILTRSU
+-----------------------------------------------------
+
+Input Variables:
+FILTRAC - filter wheel rotation acceleration.
+FILTRDC - filter wheel rotation deceleration.
+FILTRSP - filter wheel speed.
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The FILTRSU routine sets up the default filter wheel rotation parameters.
+
+-----------------------------------------------------
+#FILTTBS
+-----------------------------------------------------
+
+Input Variables:
+None
+
+Output Variables:
+TABLNGTH[6] - an array of lengths of each of the filter wheel tabs.
+
+Subroutines Called:
+FILTROT
+
+Description:
+The FILTTBS routine measures the length of each of the tabs on the 
+filter wheel which are used to indicate the orientation of the filter 
+wheel.  The lengths (in time units) are written to an array called TABLNGTH.
+
+-----------------------------------------------------
+#FILTTSU
+-----------------------------------------------------
+
+Input Variables:
+FILTTAC - filter translation acceleration.
+FILTTDC - filter translation deceleration.
+FILTTSP - filter translation speed.
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The FILTTSU routine sets the default parameters for the filter translation.
+
+-----------------------------------------------------
+#FOCALL - Deprecated.
+-----------------------------------------------------
+
+Input Variables:
+DISTALL - number of steps to move all the focus actuators.
+
+Output Variables:
+None
+
+Subroutines Called:
+FOCSTUP
+FOCMV
+
+Description:
+The FOCALL routine moves all the focus actuators the same amount of DISTALL.
+NOTE: This routine is deprecated in favor of COORDMV.
+
+-----------------------------------------------------
+#FOCGCAM
+-----------------------------------------------------
+
+Input Variables:
+DISTGCAM - number of steps to move the guide camera focus stage.
+
+Output Variables:
+None
+
+Subroutines Called:
+GCAMSU
+
+Description:
+The FOCGCAM routine moves the guide camera focus stage an amount of DISTGCAM
+steps.
+
+-----------------------------------------------------
+#FOCIND
+-----------------------------------------------------
+
+Input Variables:
+DISTA - the number of steps to move focus actuator A
+DISTB - the number of steps to move focus actuator B
+DISTC - the number of steps to move focus actuator C
+
+Output Variables:
+None
+
+Subroutines Called:
+FOCSTUP
+FOCMV
+
+Description:
+The FOCIND routine moves the three focus actuators (A, B, and C) an
+amount of DISTA, DISTB, and DISTC steps.
+
+-----------------------------------------------------
+#FOCMV
+-----------------------------------------------------
+
+Input Variables:
+None
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The FOCMV routine moves the focus actuators. This routine will be deprecated.
+
+-----------------------------------------------------
+#FOCSTUP
+-----------------------------------------------------
+
+Input Variables:
+FOCAC - focus actuator acceleration.
+FOCDC - focus actuator decleleration.
+FOCSP - focus actuator speed.
+VECAC - focus actuator vector (coordinated move) acceleration.
+VECDC - focus actuator vector (coordinated move) deceleration.
+VECSP - focus actuator vector (coordinated move) speed.
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The FOCSTUP routine sets up the default parameters for the focus actuators.
+
+-----------------------------------------------------
+#GCAMSU
+-----------------------------------------------------
+
+Input Variables:
+GFILTAC - guide camera stage acceleration.
+GFILTDC - guide camera stage deceleration.
+GFILTSP - guide camera stage speed
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The GCAMSU routine sets up the default parameters for the guide camera stage.
+
+-----------------------------------------------------
+#GFWIFN
+-----------------------------------------------------
+
+Input Variables:
+GFILTN - guide camera filter number entered by the GUI (?)
+
+Output Variables:
+FNUM_IN - guide camera filter number entered by the GUI (?)
+
+Subroutines Called:
+None
+
+Description:
+The GFWIFN routine checks that the guide filter number, GFILTN, is
+valid (1-6) and assigns its value to the variable FNUM_IN
+
+-----------------------------------------------------
+#GFWINIT
+-----------------------------------------------------
+
+Input Variables:
+None
+
+Output Variables:
+CENTER - the number of steps required to center the filter on the aperture.
+This should be moved to the eeprom.
+
+Subroutines Called:
+MOV1
+CENTER
+
+Description:
+The GFWINIT routine intializes the guide camera filter wheel by rotating
+it two positions to read where it is.
+
+-----------------------------------------------------
+#GFWMOV
+-----------------------------------------------------
+
+Input Variables:
+SNUM_IN - input filter position (?)
+
+Output Variables:
+SNUM
+
+Subroutines Called:
+GFWIFN
+CONVERT
+MOV1
+READSN
+CENTER
+GFWQ
+
+Description:
+The GFWMOV routine moves the guide filter wheel until the filter
+wheel position equals the requested position.
+
+-----------------------------------------------------
+#GFWQ
+-----------------------------------------------------
+
+Input Variables:
+FNUM - input guide camera filter number.
+
+Output Variables:
+None
+
+Subroutines Called:
+READSN
+UNCONV
+
+Description:
+The GFWQ routine queries the guide filter wheel about its position.
+
+-----------------------------------------------------
+#GFWTST1
+-----------------------------------------------------
+
+Input Variables:
+Output Variables:
+Subroutines Called:
+Description:
+Test guide filter wheel.
+
+#MOV1
+Input Variables:
+None yet. Edit that.
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The MOV1 routine move the guide camera filter wheel one position.
+
+-----------------------------------------------------
+#MVGFILT - deprecated
+-----------------------------------------------------
+
+Input Variables:
+GFILTN(ASCII) - guide camera filter number.
+
+Output Variables:
+None
+
+Subroutines Called:
+None
+
+Description:
+The MVGFILT routine moves the guide camera filter wheel.  This routine 
+is deprecated in favor of MOV1.
+
+-----------------------------------------------------
+#QUGFILT -deprecated
+-----------------------------------------------------
+
+Input Variables:
+None
+
+Output Variables:
+GFILTQ - guide camera filter wheel number
+
+Subroutines Called:
+None
+
+Description:
+The QUGFILT routine queries the guide camera filter wheel for its position.
+This routine is deprecated in favor of GFILTQ.
+
+-----------------------------------------------------
+#READSN
+-----------------------------------------------------
+
+Input Variables:
+None
+
+Output Variables:
+SNUM - guide camera filter wheel sensor number.
+
+Subroutines Called:
+None
+
+Description:
+The READSN routine reads the guide camera sensor number and converts it
+to an integer.
+
+-----------------------------------------------------
+#UNCONV
+-----------------------------------------------------
+
+Input Variables:
+SNUM - guide camera filter wheel sensor number.
+
+Output Variables:
+FNUM - guide camera filter number.
+
+Subroutines Called:
+None
+
+Description:
+The UNCONV routine "unconverts" the filter number from the sensor 
+value to the filter value.

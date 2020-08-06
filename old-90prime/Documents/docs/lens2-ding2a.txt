@@ -1,0 +1,52 @@
+From edo@as.arizona.edu Fri Jan  4 15:02:30 2002
+Date: Wed, 5 Dec 2001 13:57:28 -0700 (MST)
+From: E. Olszewski <edo@as.arizona.edu>
+To: ggwilli@as.arizona.edu, mlesser@as.arizona.edu, rwarner@as.arizona.edu
+Subject: i need to be a zen master
+
+>From smiller@as.arizona.edu Wed Dec  5 13:37:40 2001
+From: "Steve Miller" <smiller@as.arizona.edu>
+To: "Ed Olszewski" <edo@as.arizona.edu>
+Cc: "Jim Burge" <jburge@as.arizona.edu>
+Subject: L2
+Date: Wed, 5 Dec 2001 13:39:18 -0700
+MIME-Version: 1.0
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4807.1700
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0197_01C17D92.3CBDBF50
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Ed,=20
+
+This morning it was reported that  we suffered additional damage on the =
+L2 spherical surface.  This time it was Dean and he pinged the surface =
+with the drive pin while adjusting it for a polishing run.  It is a =
+small (~1mm diam) on the surface near the center.  It has also a typical =
+conical fracture that extends into the depth of the glass probably more =
+than a mm but is difficult to quantify since the fracture edge is not =
+easily seen. =20
+Jim was over here this morning and he and I examined it closely.  Jim's =
+opinion is that the defect itself is small enough to ignore.  Typically, =
+we would grind out the fracture as we did for L3 but I am reluctant to =
+carve a hole in the surface  since it will increase the size of the =
+unusable area.  We were concerned over the possibility that the fracture =
+may propagate so we looked at it under crossed polarizers and can detect =
+virtually no stress birefringence.  So it is unlikely that the fracture =
+will propagate.  However, if the coating temperature is very high it may =
+make the fracture move.=20
+Jim suggested I speak with the coating vendor to determine what the =
+optic will be subjected to in coating so I would like the contact =
+information for the coater from you along with some way to identify the =
+coating to the vendor so he knows which one I'm talking about.
+
+We are pretty sure the spherical surface is finished otherwise, but Jim =
+is checking the measured radius now.  Today, we are making a measurement =
+of the asphere.
+
+miller

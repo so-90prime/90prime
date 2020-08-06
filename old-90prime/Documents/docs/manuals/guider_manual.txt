@@ -1,0 +1,40 @@
+Steward CCD Guider Startup Instructions
+M. Lesser   27-Dec-03
+last change 14-Apr-04 MPL
+
+- Turn the power ON to the CCD guider controller power supply (on the
+  telescope).
+
+- Double click "Telcom Server" to start the telescope communication
+server.  This might already be running, move the mouse to the bottom
+of the screen to check.  If it starts with an error use
+Control-Alt-Delete to kill wishXXX.
+
+- Click the "Start server" on the "Telcom Server" window to start
+commincations with TCS.  You may now minimize the "Telcom Server"
+window.
+
+- Double click "AzCamServer" to start the guider controller software.
+The last line in the window should be "Now listening to client
+connections....".  If an error occurs check the guider power and the
+fiber optic cables.  A green LED should be visible on the fiber optic
+interface card on the back of this computer (bokpc3).  You may now
+minimize the AzCamServer window.
+
+- Double click "90PrimeGuider" or "90CassGuider" to start the guider
+program.  Typically you should use the saved paramaters option to
+start with previously working guide paramaters.
+
+- Shutdown in reverse order.  Kill the Telcom Server with the "x" in
+  the top right corner.
+
+TROUBLESHOOTING
+
+- If telcom server does not start and complains that a socket is in
+use, use Control-Alt-Delete to kill the task "wishxx" using End Task,
+wait 15 seconds, then try again.
+
+- If the guider won't shut down, use Control-Alt-Delete to kill the
+Autoguider program.  You may have to make sure a dialog box is not
+open, and wait 15 seconds for the program to be killed (a pop-up will
+appear to confirm).

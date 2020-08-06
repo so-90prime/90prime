@@ -1,0 +1,401 @@
+6 Apr 2004
+
+Some quick facts
+
+On each CCD, East is up and North is right. So if you need to move your object
+left, move it north. Pixel scale is about 0.45 arcsec/pixel.
+
+ccd3     ccd4
+
+ccd1     ccd2
+
+
+CCD3 has a trap about 2/3 of the way up, about in the middle. Data above
+the trap are useless.
+
+CCD1 has some weird pixels in upper left.
+
+CCDs 3 and 4 have 1 or two bad columns.
+
+There may be other features to be described later.
+
+As of 3pm on 7Apr04, the best focus for CCD2 isn't the same as for the
+other CCDs. You may have to ignore the existence of CCD2 for a while,
+unfortunately. We'll let you know if we can fix focus by
+tilting the dewar relative to the optics (we do this with
+the focus actuators, fyi).
+
+
+Since there's a substantial gutter between ccds, roughly 1000 pixels,
+you'll likely want to zero your coords somewhere other than the
+unseen center of the array. You might want to put it on
+the center of some chip. That said, note that offsetting
+by TCS keyboard commands wants offsets in hms and dms. If you
+paddle over, you can read off the offsets in arcsec,
+
+The full well of the CCDs is low, about 70k electrons, or about 35k
+ADU. The last measured values are:
+Amp 1: 1.78 e/DN
+Amp 2: 1.81 e/DN
+Amp 3: 1.68 e/DN
+Amp 4: 1.67 e/DN
+Amp 5: 1.71 e/DN
+Amp 6: 1.72 e/DN
+Amp 7: 1.62 e/DN
+Amp 8: 1.71 e/DN
+
+
+___________________________________________________________________________
+
+90prime gui (on the linux box STJUKSHON) startup/usage instructions
+
+
+1) There is a set of mounting and testing instructions that
+   in principle exists. So this manual starts from the
+   successful mounting of the instrument.
+
+2) Filters- Only Gary Rosenbaum is authorized to put filters
+   into filter holders. I reiterate, the only person to touch
+   raw glass is Gary Rosenbaum. the only person to clean filters
+   is Gary Rosenbaum. The only person to remove filters from
+   filter holders is Gary rosenbaum.
+
+   Got it? Only Gary Rosenbaum will handle filters. Plan ahead.
+
+   We now have a whole bunch of 6" holders, into which the existing
+   90prime-owned filters will be permanently mounted. We need to
+   make a holder-box for the filters-plus-holders. 
+
+   Once filters are permanently mounted, Bill Wood will be allowed
+   to remove holders from the instrument and install new ones.
+   Things should be relatively safe once filters are permanently
+   mounted. Observers CANNOT add/remove filters from the
+   instrument even after they're mounted in holders.
+
+3) Nitrogen filling- The operator will fill the dewar once per day.
+   Hold time is longer than 2 nights, but the change in weight
+   as nitrogen boils off will unbalance the telescope if it
+   isn't filled daily.
+
+4) Starting the 90prime Instrument gui and running the gui
+
+      Double click on the icon "90prime Instrument GUI"
+      The control interface will come up running (in older versions
+      you had to make it run).
+
+      You'll see a bunch of lights and 4 tabs- Focus, Filter Wheel,
+      Guide Camera, and Misc.
+
+      For now, you need to type the follwoing command into a xterm
+      window, "dataserver". This command now works as of 7Apr04, but
+      apparently one can go back to the old way if it fails. It
+      will require a phonecall to go back to the old way.
+      This command sets up the way we transfer data from the CCD computer
+      (running WINDOWS) to STJUKSHON (this computer, running LINUX).
+      It also sets up a DS9 display for quick look. You'll
+      want to use "mscdisplay" for real analysis like "imexamine".
+
+
+      We'll now quickly go through the tabs:
+
+       THE FOCUS TAB
+
+         On startup, you'll see three LVDT readings, one for each
+         focus actuator. Usually you'll see the last digit change
+         by one. That's insurance that things are actually running.
+         The LVDTs give an absolute reference frame.
+
+         Now we'll explain the buttons one by one:
+        
+       a)  Focus- this actively moves the three focus actuators
+          a predefined amount. the predefined amount is set by typing
+          a number of encoder steps (as opposed to LVDT increments)
+          into the steps windows. If the "link" button is on, you only
+          type into B, and that same number appears in A and C.
+          That's the mode you'll use.
+
+          Do hit a carriage return.
+
+          The gui also converts encoder steps into microns, and keeps
+          track of total steps.
+
+          Actual focussing is done using the CCD control software.
+          The software will take an exposure, close the shutter,
+          shift charge, change the focus, opern the shutter, etc,
+          and then finally readout. 
+
+          We have aligned the focal plane of the CCDs as best we can with
+          the focal plane of the optics. If you move actuators A B C
+          different amounts, you've destroyed this work.
+
+          For reference, in January 2004, good focus was A=2.237, B=2.217,
+          C=2.309. While the value will change (It should go down xxx
+          as the temperature goes up), the offsets between the three actuators
+          should not change. So check that these offsets are about right,
+          and if they aren't, you should look for a note or you should make
+          a phonecall to see if there was an update or if the previous
+          observer screwed up.
+
+          You can keep track of the focus by clicking on the button
+          SET REFERENCES.
+
+       b) SET REFERENCES
+    
+          We jsut discussed it above.
+
+       c) TWEAK FOCUS
+
+          The instrument flexes. That's bad. The LVDTs allow us to
+          monitor that flexure. TWEAK FOCUS unflexes the telescope by
+          driving the LVDTs back to their reference values. So after
+          a focus run, do click on SET REFERENCES.
+
+          To reiterate, you've just gotten into perfect focus. We'd
+          like to believe that if you move to somewhere else in the sky,
+          all that changes is because of instrument flexure. To first
+          order, we can remove that change by hitting TWEAK FOCUS.
+          Of course, the telescope itself flexes too, and perhaps
+          the optics assembly itself flexes. At this point, we are
+          pretty convinced that most problems you'll encounter
+          will be fixed by TWEAK FOCUS and/or a focus run.
+
+          DO NOT change individual actuators. It's currently
+          a real pain to align the focal plane. If you want to
+          help us write software to align the focal plane quickly,
+          we'd be grateful for your help.
+
+       d) ZERO TOTALS
+
+          It zeros out the totals windows.
+
+       e) ZERO ENCODERS
+
+          It zeros the encoder windows. 
+ 
+
+       THE FILTER WHEEL TAB
+
+       Since this part of the gui was written, our way of intereacting
+       with it has been modified to make it better.
+   
+       So ,let's start by clicking on CONTROL. 
+       That will bring up a popup that you'll leave running at all times.
+       So move the popup to a favorite place.
+
+       Many of the commands in the main tab are repeated in the popup.
+       Ignore the ones in the main tab, use the popup.
+
+       Therefore, aside from some reassuring lights, here is a list
+       of the only buttons you'll push in the main FILTER WHEEL tab:
+        CONTROL (we've already talked about the fact that it brings
+         up a super useful popup)
+        POPULATE WINDOW - this allows Gary Rosenbaum to put filters
+         into the instrument.
+        ROTATION OFF (and ON)- this might be used in an emergency, as
+         would be explained to you by one of us.
+
+       So, the rest of this section will explain the "90prime Filter
+        Wheel Control" popup:
+
+        INIT FILTER WHEEL- this is done right after Gary Rosenbaum
+         loads filters, or after a power failure. Basically, the filter wheel
+         is spun around once, stopping momentarily to read the tabs
+         in each filter holder. The computer then knows the filter
+         number in each filter position (filter number refers to the filter
+         holder whereas filter position is one of six slots in the filter
+         wheel).
+
+        READ FILTERS- There's a file on this computer, at
+         /home/bokobs/90prime/galil/filters.txt
+         that contains the transformation between filter position
+         and filter name. This file is edited by the Gary Rosenbaum.
+         Hitting READ FILTERS applies this program. Now
+         you know the real names of your filters.
+
+        CHANGE FILTERS- This changes from the current filter to the 
+         filter that is selected in the Filter Names box.
+
+        SLIDE- our filter wheel works by rotating into position, then
+         sliding the filter in. So rather than using the CHANGE FILTERS
+         button we could ROTATE and then SLIDE.  The SLIDE direction is
+         controlled with an in/out toggle. When a filter
+         is in the beam, the ROTATE button is disabled so
+         that you can't rotate with a filter in the beam.
+
+        now ROTATE- assuming you have no filter in the beam,
+         you can set the filter name in the window, and then hit
+         ROTATE to rotate to that location.
+
+        CLOSE closes this popup
+
+        STOP RUNNING 
+        You'll almost never be instructed to push this button
+
+
+
+    THE GUIDE CAMERA TAB
+
+      Focussing is now done at the TCS console by the operator.
+      You'll have to INITIALIZE and CHANGE guide FILTER (guide filter
+       is different from science filter, guider light is picked
+       off before science filter)
+
+      We've provided a few 1" round filters for now in the guider:
+        1) blank/clear
+        2) RED
+        3) neutral density
+        4) blank
+        5) green
+        6) blue
+
+      We don't have much experience for how much guiding with the
+      'correct filter' matters.
+
+
+     The guide camera is at a fixed location. It's fed by a pickoff
+     mirror. If you don't have guide stars, your only choices are
+     to increase the guider exposure time or to move the telescope a bit.
+     The guider field is roughly 4x4 arcmin. The telescope field is roughly
+     60x60 arcmin, with roughly 10 arcmin gutters between CCDs.
+
+     From pixel (3993,3868), roughly, on CCD1 (lower left CCD in
+     the mosaic), one offsets 328 arcsec WEST and 3123 arcsec NORTH
+     to center that star on the guider. This is just a useful
+     fact.
+
+
+     MISC.
+
+     At this point, these are potential commands that'll only
+     be used by you at Grant's command.
+
+
+____________________________________________________________________________
+
+     The CCD (on rack mounted BOKCCD2) computer
+
+     This is a machine running WINDOWS. It talks to the CCD
+     controller. While it is in principle a stand-alone
+     machine, we use it to run the data-taking gui and to
+     ship data to STJUKSHON.
+
+     Mike Lesser has a prototype version of the LABVIEW executable
+     (LABVIEW is what makes the guis for us) that will run in linux,
+     thus allowing the gui to appear on stjukshon, thus making
+     it easier for one person to observe. This version is not totally
+     tested. We'll let you know when it appears.
+
+
+
+     If you turn the machine or or reboot it, the 90PrimeAzCamServer
+     will come up automatically. Yuo can minimize it.
+
+     Then double click on AzCamTool icon in upper right. It'll
+     load a bunch of stuff and be running. This is what you need
+     to take data.
+
+     You'll need to set some parameters (ps: there's a longer version
+     on the 90prime site at compton.as.arizona.edu/90prime)
+
+     1) Click on Detector. It'll say 4096x4096, binned 1x1, with 40 cols
+        of overscan per ccd. You'll not have to change this, so
+        hit cancel (clearly if you do make changes, hit 'apply")
+
+     2) RESET button resets the controller. It might sometime be
+        needed.
+
+     3) PREFERENCES has a bunch of flags. The only one you might
+        want to check that's not already checked is "Prompt
+        for Image Title"
+
+     4) click on FILENAME button.
+        Here's where you set where on STJUKSHON the data will end up.
+        You'll also control rootnames and sequence numbers and several
+        automatic aspects of naming here.
+
+     5) Save Image should always be on
+
+     6) You can type into anything yellow. Be careful not to mess with
+        binning, you could waste a lot of time if you change that
+        and forget.
+
+     7) there's a MODE information window:
+        you'll see IDLE, PREPARING, EXPOSING, READOUT, CREATING.
+        The last one means that the readout stream is being properly
+         assembled and shipped.
+
+     8) There are many other features: Imagetype, expose/pause,
+        sequence, testimage, title, exposure time. With luck these
+        will quickly be self evident.
+
+     9) Lots of other abilities I haven't described (for instance
+        RUN SCRIPT), partly because these abilities are new
+        and/or not completely tested, or because edo doesn't
+        yet know how they work. 
+
+___________________________________________________________________________
+
+Archiving data
+
+The DDS4 dat drive is called /dev/nst0, or /dev/nst0m for compressed.
+If you already have compressed data, this compression will
+buy you little/nothing. 
+
+There's a dvd reader/writer. You can use DVDRECORD or XCDROAST.
+Neil Lauver is the only one we know who's successfully written
+DVDs. We'll add more later.
+
+There's also scp to downtown or to your laptop.
+
+There's also a USB option, plug it in. The mountpoint is
+/mnt/diskonkey
+so say cp *.fits.gz .
+or some such command, but you know that.
+
+STEWARD MAKES NO AUTOMATIC ARCHIVES OF ANY SORT. IT'S UP TO YOU.
+[we have chatted with noao about becoming part of their
+automatic archive, but this is far from coming to pass.]
+
+_____________________________________________________________________________
+
+Flatfields, fringing and the like
+
+When we conceived of 90prime, we assumed flats would be twilight
+or dark sky flats. We are slowly trying to make working dome flats
+since the weather often won't cooperate.
+
+Note that the operators work from 0.5 hours after sunset to
+0.5 hours before sunrise. This is not ideal for flats. 
+With other instruments, the observer makes a deal with
+the operator to come early and go home early. If taking only
+eveing flats, say, is insufficient, write a polite note
+in the trouble report. Bob Peterson and Paul Smith and
+Bill Wood are aware that some changes may need to be made.
+Exactly what those changes could be is unclear.
+
+As of April 7, 2004, the flatfield lamps are still uneven
+with specular reflections. My guess is that right now they're
+not useful. We're working SLOWLY on the problem.
+
+There are fringes in the redder passbands. You need to take
+the proper data to make fringe frames. We'll see if we can
+make a library of fringe frames.
+
+QE curve is found at
+adansonia.as.arizona.edu/~edo/90prime1_qe.pdf
+
+CCD layout is found at
+http://compton.as.arizona.edu/90prime/docs/CCDconfig.ps
+
+Windhorst filter curves are found at
+http://www.noao.edu/noao/mosaic/filters.html
+click on "click here"
+these are 5.75" square filters
+some vignetting occurs
+
+90prime owns 13 6" square filters
+Bessell U B V R I
+SDSS u' g' r' i' z'
+Washington C M DDO51
+Note that Olszewski bought 4, Olszewski/Bechtold bought
+1 or 2, NAU bought1, 90" bought 1, Xiaohui Fan bought 4.

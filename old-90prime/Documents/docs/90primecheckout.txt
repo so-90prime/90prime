@@ -1,0 +1,76 @@
+On STJUKSHON
+
+1) LOGIN as bokobs
+2) Double click on 90prime Instrument GUI icon
+3) Click POPULATE WHEEL to let Gary load filters.
+4) Click on Filter Wheel tab
+5) Click the CONTROL button, a new popup will appear
+6) Assuming filters are loaded, click on INIT FILTER WHEEL
+   in that new popup.
+7) Edit the file /home/bokobs/90prime/galil/filters.txt if it 
+   is not correct.  This file contains the translation of
+   filter-holder numbers to real names.
+
+   Click on READ FILTERS
+
+8) Pick a filter and rotate to it (this is test 1)
+9) Move that filter in and out (this is test 2)
+
+   You can watch the "moving" light above, and the forward and reverse limits.
+   The popup should never turn red. red is bad. It should be yellow
+   if at forward limit (inserted), or orange if moving, or green if at
+   reverse limit (not in beam)
+10) make a new directory for today's UT date. say
+    mkdir /data/bokobs/xxMMMyy
+    ie, mkdir /data/bokobs 8apr04 (if it's the afternoon of the 7th)
+11) in a bokobs (not iraf) window, type "dataserver"
+    Minimize that window
+    it'll bring up a ds9 and will allow bokccd2 to talk to stjukshon
+12) In FOCUS tab, put "100" in B with a carriage return, 
+    click FOCUS, watch lights and numbers
+    to see that all actuators move.
+
+
+
+ON TCS COMPUTER
+1) turn on TCS, the ccd computer queries TCS for some stuff
+
+
+
+ON BOKCCD2 (the CCD computer, the other keyboard)
+
+1) It comes up with AZCAMSERVER running. You can minimize it.
+2) Double click on AzCamTool. Many things will happen and it'll
+   come up running.
+3) Click on FILENAME
+   set directory to an existing directory on stjukshon, something like
+    /data/bokobs/2Jan04 (ie, the UT date)
+4) Set imagetype to ZERO, and set testimage, click EXPOSE
+   You'll see IDLE, PREPARING, (EXPOSE), READOUT, CREATING
+   (since exposure is zero seconds, you won't actually see the word expose)
+
+   You likely want to throw the first one away. You likely want
+   to have lights out as best you can.
+
+5) Now the image is on stjukshon
+
+
+
+BACK ON STJUKSHON
+
+6) You'll see the image, but it's time to load it with iraf
+   Open an iraf window.
+   type mscred
+
+7) Type mscdisplay picturename.fits, where picturename is the real file name
+
+8) Type mscexamine (it's like imexamine)
+   Type m in each ccd, or whatever your favorite commands are
+
+9) Type imexamine test.fits[1] (assuming the name is test.fits)
+   that allows you to see the plots of chip 1
+
+   Type imexamine test.fits[2] then [3] then [4]
+
+
+We'll provide some numbers later.

@@ -1,0 +1,32 @@
+This document outlines the procedure and policy that should be followed
+when editing the Galil motion control firmware for the 90prime instrument.
+It is possible that the firmware could be corrupted because of communication
+interuptions and therefore it is imperative that this policy be followed.
+
+1.  When uploading or downloading code to the GMC be sure that no 
+other software is communicating with the motion controller.  If something
+is communicating with the controller either kill it or DO NOT make
+permanent changes.
+
+2.  Do not burn a program (BP) into eprom when other software is 
+communicating with the device.  This could cause the firmware 
+to become corrupted during the burn.
+
+3.  The current firmware should always be backed up at:
+
+	http://compton.as.arizona.edu/90prime/docs/90prime_current.dmc
+
+Older versions should be saved with the naming convention:
+
+	90prime_yymmdd.dmc
+
+where yy is the year, mm is the month, and dd is the day 
+
+	e.g. 90prime_040426.dmc
+
+4. Prior to burning any firmware, upload it and compare it with the
+previous version to ensure that only the desired changes are present.
+This can be done with the "diff" program for Linux or the "examdiff"
+program for Windows.
+
+5. Always alert Jeff Rill and Grant Williams of any changes.

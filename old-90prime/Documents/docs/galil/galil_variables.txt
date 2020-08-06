@@ -1,0 +1,71 @@
+The following is a list of variables which are burned into the 90prime
+Galil's non-volatile eeprom.  The list below gives the state of the
+variables at power up or after issuing the "RS" command to the Galil. 
+
+Updated:	11/02/03 GGW
+		12/29/03 GGW
+
+Note: Updated does not necessarily mean up-to-date.
+
+Variables:
+These can be queried with the LV (List Variables) Galil command.
+* The 99999 are values which cannot be displayed by the Galil in its 
+default fomating method. To view these values use the following formatted 
+message command: MG{F10.0} FILTRBL
+**ASCII characters. To view these values use the following formated
+message command: MG{S} GFILTN
+
+DISTA=200		;focus actuator A default move distance
+DISTALL=200		;focus actuator all default move distance (coord move)
+DISTB=200		;focus actuator B default move distance
+DISTC=200		;focus actuator C default move distance
+DISTGCAM=100		;guide camera default move distance
+FILTISIN=1		;flag indicating if there is a filter in the beam;
+			;it is latched if the "filter in" translation routine
+			;has been run and the "filter out" translation routine
+			;has not been run
+FILTRAC=5120		;filter rotation acceleration
+FILTRBL=-99999*		;filter rotation reverse software limit (BL)
+	-2147483648	;default, this value turns off the reverse limit
+FILTRDC=14336		;filter rotation deceleration
+FILTRFL=99999*		;filter rotaion forward limit (FL)
+	2147483647	;default, this value turns off the forward limit
+FILTRSP=500		;filter rotation speed
+FILTTAC=5120		;filter translation acceleration
+FILTTDC=99999*		;filter translation deceleration
+	239616		;high value to stop translation abruptly
+FILTTDIS=21000		;filter translation distance 
+FILTTNUD=300		;filter translation nudge distance
+			;used to put the translation pin into the 	
+			;center of the groove
+FILTTSC=-1		;filter translation stop code
+			;used to determine if a filter is jammed during
+			;translation or stops on a limit
+			;equals 2 for a forward and 3 for a reverse limit.
+FILTTSP=5000		;filter translation speed
+FOCAC=9216		;focus actuator acceleration
+FOCBL=-99999*		;focus actuator reverse software limit (BL)
+	-2147483648	;default, this value turns off the reverse limit
+FOCDC=9216		;focus actuator deceleration
+FOCFL=99999*		;focus actuator forward software limit (FL)
+	2147483647	;default, this value turns off the forward limit
+FOCREFA=0		;focus actuator A reference position
+FOCREFB=0		;focus actuator B reference position
+FOCREFC=0		;focus actuator C reference position
+FOCRFSET=0		;booleen, is the focus reference set?
+FOCSP=600		;focus actuator speed
+GFILTAC=9216		;guider filter wheel acceleration
+GFILTDC=9216		;guider filter wheel deceleration
+GFILTN=99999**		;guider filter number, ASCII
+	1		;defualt value
+GFILTQ=99999**		;guider filter number from a query, ASCII
+	0		;default before a query is made
+GFILTSP=500		;guider filter wheel speed
+NROT=1			;number of positions to rotate the filter wheel
+REQFILT=256		;the filter holder number to rotate to
+TOTFOCA=0		;total focus units moved in focus actuator A
+TOTFOCB=0		;total focus units moved in focus actuator B
+TOTFOCC=0		;total focus units moved in focus actuator C
+VECAC=9216		;focus actuator vector (coordinated) move acceleration
+VECDC=9216		;focus actuator vector (coordinated) move deceleration
+VECSP=1040		;focus actuator vector (coordinated) move speed 

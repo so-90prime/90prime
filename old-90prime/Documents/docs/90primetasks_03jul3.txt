@@ -1,0 +1,122 @@
+10 July 03
+90prime notes 2
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Chores to be done before Sept 15:
+
+1) Make optics can and top box light tight.
+   This includes the bellows.
+
+2) Have main baffle ready for testing.
+
+3) Baffle primary (we've actually agreed this will be done during mirror
+    aluminizing in October bright time)
+
+4) Measure whatever filters we have, using the Kitt Peak monochrometer
+
+5) Work on real headers for CCD data. Need to include RA/Dec and other
+    stuff from TCS, information from Galil, information needed to run
+    MSCRED properly.
+
+6) Write code to use focus frames and/or FWHM measurements across
+    the chip to then move actuators to the best position.
+
+7) Write code to move LVDTs back to their nominal position. Probably
+    at this point we just want a button, we don't want to do it without
+    astronomer intervention. This would be used the rest of the night (we hope)
+    after item 6 is done at the beginning of a run.
+
+8) Gain the ability to have a little more control over the settings
+    (how many counts needed before a star can be considered good) for
+    the autoguider.
+
+9) Finish and test autoguider electronic fixes/changes.
+
+10) Add a third (and maybe a 4th) CCD. Does this entail the week's work
+     of aligning? (i presume so)
+
+11) CCD controller/power supply "power failure" cause and cure.
+
+12) Make a 90prime account on Stjukshon and give the bokobs account
+     to teh non-90prime observers to use.
+
+13) Try to get rid of Bok entirely.
+
+14) Decide if we're going to cut any metal to give us more focus/tweak range.
+
+15) Some cable lengths need to be changed.
+
+16) Begin to write cheat sheets (both for the observer and for the guys
+     who have to put the instrument on and take it off).
+
+17) Fix the "filter getting stuck while loading" problem.
+
+18) Plate (Jeff Rill suggests a sliding plate for a good reason that
+     we might want to watch the shutter) for cass hole.
+
+19) Shutter spares/repairs from the problems of this winter.
+
+20) I wonder if we should install some flatfield lamps...
+
+21) We have the info for an opticla tweak off the telescope to minimize
+     coma?
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Things that need to be done after Sept:
+
+1) Even though we have the LVDTs, other things flex. So we need to have a 
+    pointing run at some point?
+
+2) Cable routing/trays
+
+3) List of what few spares we have.
+
+4) More cheat sheet work, more work on manual.
+   Rules of thumb for when the focus needs tweaking.
+   Suggestions for autoguider focussing...
+
+5) Rules of thumb for flatfields, standards, scattered light.
+
+6) Visit the 90" with the 10 micron camera and find hot spots.
+   Somehow decide how to deal with them.
+
+7) CCD autoguider cooling system improvements.
+
+8) Eventually, fixing the flexure of the optical system, perhaps by
+    replacing the actuators.
+
+9) More optical tweaks?
+
+10) Design a set of tests every observer should make and archive for us.
+     (optical alignment, ccd gain and readnoise and linearity, etc)
+
+11) Library of CCD parameters (photons/sec at 20th mag in each filter,
+     color terms for each CCD, etc)
+
+12) Library of standard fields.
+
+13) Track down the second source of astigmatism mentioned by Jim.
+
+14) I guess this is the same as manuals and cheat sheets, but we need to keep
+     a good website.
+    We need to keep a good list of things astronomers have learned about
+     this instrument to make the data better.
+    We need a list of flatfield images and darks and such, so that astronomers
+     and Gary Rosenbaums can evaluate the CCD performance.
+
+15) Storage facility and handling rules for filters, assuming they ever come.
+
+16) Rules/thoughts about what observing we'll support in Jan-Apr. We won't
+     exactly be able to go from the coming trimester's form of observing, 
+     straight to facility observing, we'll have to do some hand holding.
+
+17) Can we tell if the astigmatism "in the primary" is polished in, or
+     is somehow caused by mirror support? Does it change with time or
+     is it stable?
+
+18) Is there a cure for this second source of astigmatism? Can we model it
+     in Zemax?
+
+19) Pretty pictures and great discoveries.

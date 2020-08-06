@@ -1,0 +1,4 @@
+Options +Indexes 
+# or #
+#IndexIgnore *
+IndexOptions +FancyIndexing

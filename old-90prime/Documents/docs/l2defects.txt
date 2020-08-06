@@ -1,0 +1,150 @@
+From: "Steve Miller" <smiller@as.arizona.edu>
+To: "Ed Olszewski" <edo@as.arizona.edu>, "Jim Burge" <jburge@as.arizona.edu>
+Cc: "Roger Ceragioli" <rceragioli@as.arizona.edu>
+Subject: l2 Status
+Date: Wed, 28 Nov 2001 18:00:45 -0700
+
+Ed,
+
+We acid etched the edge and back to relieve stress in the blank because
+I was concerned at the change in figure measured by Lee before
+Thanksgiving.  We have begun re-grinding the spherical surface.
+
+We have chipped the spherical surface in the process of measuring the
+wedge.  It is a small chip coming in from the edge, but it does extend
+into the clear aperture a little.  I'll get Jim to look at it but I
+think it will be OK. 
+
+We will proceed with polishing the rear.  THen measure the figure and
+axis centration again.
+
+sm
+
+------------------------------------------------------------------------
+
+From edo@as.arizona.edu Fri Jan  4 14:59:46 2002
+Date: Thu, 29 Nov 2001 16:59:11 -0700 (MST)
+From: E. Olszewski <edo@as.arizona.edu>
+To: ggwilli@as.arizona.edu, mlesser@as.arizona.edu
+Subject: Jim's email
+
+Ed,
+
+I have evaluated the chip in L2 and recommend that we proceed with
+the part, then paint the area black before installing the lens.
+The chip is big and ugly, but the area it extends into the clear
+aperture is only about 8 mm across.  The beam is 200 mm across here,
+so worst case, it affects 0.16%.  
+
+In fact, we can do much better then this.  If we clock the chip so that it
+is oriented along the sides (not the corners) of the filters and the CCD,
+then it will never be seen by the focal plane.  We do need to make sure that
+we do NOT put it on the side of the guider.
+
+Steve is proceeding with the spherical surface, assuming that he does not
+need to correct it.  The option for fixing the lens would be to regenerate
+the surface.  We would lose about 1 mm of thickness and several days.  Since
+we can simply orient the part to make the problem go away, I recommend we
+accept the part with the ding in it.
+
+If you have questions, please call me.  Otherwise, please give Steve the
+okay to finish the lens as is.
+
+Jim
+
+--------------------------------------------------------------------------
+
+From: "Steve Miller" <smiller@as.arizona.edu>
+To: "Ed Olszewski" <edo@as.arizona.edu>
+Cc: "Jim Burge" <jburge@as.arizona.edu>
+Subject: L2
+Date: Wed, 5 Dec 2001 13:39:18 -0700
+
+Ed,
+
+This morning it was reported that  we suffered additional damage on the 
+L2 spherical surface.  This time it was Dean and he pinged the surface 
+with the drive pin while adjusting it for a polishing run.  It is a 
+small (~1mm diam) on the surface near the center.  It has also a typical 
+conical fracture that extends into the depth of the glass probably more 
+than a mm but is difficult to quantify since the fracture edge is not 
+easily seen. 
+
+Jim was over here this morning and he and I examined it closely.  Jim's 
+opinion is that the defect itself is small enough to ignore.  Typically, 
+we would grind out the fracture as we did for L3 but I am reluctant to 
+carve a hole in the surface  since it will increase the size of the 
+unusable area.  We were concerned over the possibility that the fracture 
+may propagate so we looked at it under crossed polarizers and can detect
+virtually no stress birefringence.  So it is unlikely that the fracture
+will propagate.  However, if the coating temperature is very high it may
+make the fracture move.
+
+Jim suggested I speak with the coating vendor to determine what the
+optic will be subjected to in coating so I would like the contact
+information for the coater from you along with some way to identify the
+coating to the vendor so he knows which one I'm talking about.
+
+We are pretty sure the spherical surface is finished otherwise, but Jim
+is checking the measured radius now.  Today, we are making a measurement
+of the asphere.
+
+miller
+
+-------------------------------------------------------------------------
+
+From: Jim Burge <JBurge@optics.Arizona.EDU>
+To: "'Steve Miller'" <smiller@as.arizona.edu>,
+        "'E. Olszewski'"
+	 <edo@as.arizona.edu>
+Subject: RE: L2
+Date: Wed, 5 Dec 2001 13:49:08 -0700 
+
+Steve,  Ed,
+ 
+The radius of the L2 sphere is within spec.  I calculate 1128.2 +/- 0.1 mm.
+The spec is 1128.1 +/- 1 mm.
+It is not clear whether the surface is polished out.  I didn't inspect this.
+If it is polished out then it is done.
+ 
+The ding in the lens will cost the system a 2 mm obscuration.  The beam
+diameter here is 200 mm, so we lose 1/10000 of the area.  The ding  will
+need to be painted out.  Unless there is a compelling reason to do anything
+else, I think we should leave it and not try to excise it.  There is no
+visible stress around the fracture.  The only concern is during coating.
+Steve should talk to the coater.
+ 
+Jim
+
+--------------------------------------------------------------------------
+
+From: Jim Burge <JBurge@optics.Arizona.EDU>
+To: "'E. Olszewski'" <edo@as.arizona.edu>
+Subject: RE: L2 and L3 dings
+Date: Fri, 7 Dec 2001 11:22:11 -0700 
+
+Here is a brief explanation of the basic effects of small dings...
+
+The 2 mm ding is tiny compared with the 200 mm beam from a single star.  For
+each star, the ding does 2 bad things:
+1. Scatters light out of the image making it dimmer by an amount 
+	2(Ading/Abeam)^2 = 0.02%.  This loss will be present for all of the
+stars, and it is so tiny you will never see this effect.
+
+2.  Half of his light is absorbed, the other half is scattered.  So each
+star will spread 0.01% of its light all over angles roughly lambda/Dding.
+1 mrad.  the place.  This increases your background slightly.  The lens is
+roughly 700 mm from the focal plane, so each star will have a ghost halo,
+about 175 um wide with 0.01% of the light in it.  0.5 arcsec images, the
+images are 17 um.  The ghost will be about 0.0001% as bright as its star.
+You will not be able to see it unless your detector has dynamic range of
+1000000:1 or 20 bits.
+
+For 1 arcsec images, this ratio is of course 4 times worse 18 bits.
+
+Where these can hurt you most is obviously for very high contrast
+observations.  
+
+I hope this helps.
+
+Jim

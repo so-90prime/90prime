@@ -1,0 +1,47 @@
+90prime fact sheet from Sept 30 2010
+Note, this document is a bit more than 72 columns wide.
+
+                                   WEST
+          ____________________________________________________________
+          |                         |  |               |   amp       |
+          |                         |  |               |   16        |                                                      
+          |         CCD             |  |       CCD     |             |
+          |           3             |  |        4      | ----------- |                             
+          |                         |  |                             |                             
+          |                         |  |                             |                             
+          |_________________________|  |_____________________________|                             
+ NORTH    |_________________________   ______________________________|   SOUTH                                                     
+          |                         |  |                             |
+          |                         |  |                             |
+          |       CCD               |  |          CCD                |
+          |        1                |  |            2                | 
+          |                         |  |                             |
+          |                         |  |                             |
+          |_________________________|__|_____________________________|
+
+                                  EAST
+
+
+Chip4 has only 1 good amp (amp 16), other 3 turned off.
+As of Sept 30, to display image properly in quick look (automatic) or
+ds9, invert xy has to be on. In MSCDISPLAY, no invert has to be turned on.
+This will get fixed.
+
+Offset from center of the 4 CCDs (the center of gutter) to center of chip 1:
+move the telescope1006 arcsec SOUTH (ie, -1006)
+move 908 the telescope arcsec WEST (ie, -908)
+
+Each CCD is 4032x4096 physical pixels, 15 micron pixels, approx 0.45 arcsec/pix
+
+Each CCD has 4 amps, each amp is 2016x2048, but each amp has overscan,
+so before processing each amp is 2036x2048 (ie, (2016+20 overscan)x4096)
+
+Gain is about 1.7-2 (see header)
+Readnoise is less than or about 10 electrons (see header)
+
+Nonlinearity starts about 60,000 data numbers.
+We took flats shooting for 30-40k for no obvious reason.
+(Remember you can take images as short as 0.01 seconds with no problems)
+
+The focal plane is pretty flat. Quite flat internally, and we've gotten it pretty
+flat on the sky. On-sky flatness can be improved.

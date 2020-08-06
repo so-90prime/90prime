@@ -1,0 +1,111 @@
+Mike- this is an example of what I once sent the Barr, CustomSci, and one other place.
+People who want to order new filters need this.
+
+
+> We request bids on the following filters.
+> We divide them into three sets: UBVRI, Washington, and SDSS
+> 
+> If there is a price difference in buying all 13 filters or a subset
+> of those 13, please note.
+> 
+> If any of our specs is driving the price, please specify a relaxed
+> parameter and lower price, as well as the price with our original specs.
+> 
+> 
+> ALL FILTERS ARE TO BE PADDED TO 12mm THICKNESS USING CLEAR GLASS THAT
+> DOES NOT MODIFY THE PASSBAND (probably BK7 except for UV filters)
+> 
+>  Common Specifications:
+>   1. Standard Bessell Filters, Washington Filters, SDSS filters. If there
+>      is any ambiguity in your minds, please contact us. See notes below.
+> 
+>      We also ask for a quotation for a non-standard I filter that is an
+>      interference filter, as well. (This has slightly different CWL
+>      from the Bessell I filter)
+> 
+>   2.  CWL and FWHM are specified for f/3.5 converging beam at 5 degrees C.
+>   3.  Passband ripple is minimized for interference filters
+>   4.  Transmission uniformities are less than 5%.
+>   5.  Blocking 300-1200 nm:  no leaks worse than 0.01%.
+>   6.  No pinholes per MIL-C-13830A.
+>   7.  Size:  6.0 +0.0 -0.03 inches SQUARE, clear aperture 5.75 inches.
+>   8.  Thickness:  12.0 mm +-  xxx (all filters to be padded to this thickness) [there was a mistake in this email and i haven't found the correct thickness tolerance yet]
+>   10.  Parallelism:  1 arc minute or better.
+>   11.  60-40 scratch-dig.
+>   12.  A/R coat both sides, reflectivity less than 1.0% per surface.
+>   13. For Interference Filters, 90% bandwidth shall be greater than 65% of FWHM.
+> 
+> We are concerned about redleaks on all filters and about peak throughput.
+> Please quote peak throughput on each filter. It is best to quote
+> empirical values, but theoretical values are acceptable if you have not made
+> the specific filter before.
+> I) UBVRI "Bessell Filters"
+> U and B and V and R are all glass.
+> We suggest that U be made with 1mm UG1, 1mm S8612, 2mm WG305.
+> Please state a cost for this formula and for your formula. 
+> We are very concerned about throughput for this filter.
+> Redleak for this filter is a major concern.
+> 
+> Prescriptions for the remaining filters are as follows.
+> If your prescription differs, please note in your bid (we are not wedded
+> to the following prescriptions):
+> 
+> B  substrate BK7, 1mm GG385, 2mm BG39, 1mm BK12 external
+> 
+> V BK7 substrate, 2mm BG39, 2mm GG495 external
+> 
+> R BK7 subtrate, 2mm OG570, 2mm KG3 external
+> 
+> I BK7 substrate, 3mm RG9, 2mmWG305
+> 
+> The "Bessell I" filter is all glass. Please quote for this filter
+> or for an interference filter matching the following passband:
+> CWL=8035 Angstroms; fwhm= 1600 Angstroms
+> the filter we own has almost a square wave throughput, so fwhm and
+> fw90% are almost identical. Peak transmission is >90% and is greater
+> than 75% across entire passband.
+> 
+> II Washington:
+> 
+> 1)  prescription for Washington C has changed:
+> 3mm BG3 plus 4mm Bg 40 plus UBK7 to padd to 12mm
+> 
+> 2) Washington M:
+> 3mm GG455
+> 3mm S8612
+> BK7 to padd to 12mm
+> 
+> 3) DDO51:
+> interference filter
+> CWL 514nm+-2nm
+> Full band at half transmission 16nm+-3nm
+> 90% bandwidth greater than 65% of FWHM
+> minimum peak transmission 75%
+> transmission peak variation in any area <5% absolute
+> 
+> 4) final Washington filter is actually SDSS i'
+> interference filter
+> 
+> 4mm RG695
+> BK 7 to pad to 12mm
+> coating
+>         T(680-832 nm)               > 94% (average)
+>         T(900-1100 nm)              < 0.1%
+>         cutoff (T=50%) wavelength   850 +- 5 nm         
+>         cutoff width                < 20 nm
+>         amp. of ripples             < 5%
+>       anti-reflection coating on the other side 
+>                   R<1% over the bandpass range
+> 
+> III) SDSS filters
+> Note that we would already be purchasing SDSS i' above
+> So we'd like SDSS u' g' r' z'
+> 
+> Specs can be seen at
+> http://indus.astron.s.u-tokyo.ac.jp/works/SDSS/filters/filter_spec
+> transmission curves can be seen at
+> http://indus.astron.s.u-tokyo.ac.jp/works/SDSS/filters.html
+> 
+> All SDSS filters are interference filters with colored glass, and are to
+> be padded to 12mm.
+> 

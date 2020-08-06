@@ -1,0 +1,30 @@
+From edo@as.arizona.edu Fri Jan  4 14:59:46 2002
+Date: Thu, 29 Nov 2001 16:59:11 -0700 (MST)
+From: E. Olszewski <edo@as.arizona.edu>
+To: ggwilli@as.arizona.edu, mlesser@as.arizona.edu
+Subject: Jim's email
+
+"
+Ed,
+
+I have evaluated the chip in L2 and recommend that we proceed with the part,
+then paint the area black before installing the lens.
+The chip is big and ugly, but the area it extends into the clear aperture is
+only about 8 mm across.  The beam is 200 mm across here, so worst case, it
+affects 0.16%.  
+In fact, we can do much better then this.  If we clock the chip so that it
+is oriented along the sides (not the corners) of the filters and the CCD,
+then it will never be seen by the focal plane.  We do need to make sure that
+we do NOT put it on the side of the guider.
+
+Steve is proceeding with the spherical surface, assuming that he does not
+need to correct it.  The option for fixing the lens would be to regenerate
+the surface.  We would lose about 1 mm of thickness and several days.  Since
+we can simply orient the part to make the problem go away, I recommend we
+accept the part with the ding in it.
+
+If you have questions, please call me.  Otherwise, please give Steve the
+okay to finish the lens as is.
+
+Jim
+"

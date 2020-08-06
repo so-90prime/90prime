@@ -1,0 +1,108 @@
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.4.16)  30 NOV 2004 19:20
+**90primemanual.tex
+(./90primemanual.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/natbib/natbib.sty
+Package: natbib 2000/07/24 7.0a (PWD)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 508.
+\c@NAT@ctr=\count87
+) (./aas_macros.sty)
+(/usr/share/texmf/tex/latex/html/url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
+) (./90primemanual.aux)
+\openout1 = `90primemanual.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 8.
+ [1
+
+] [2]
+Overfull \hbox (6.7195pt too wide) in paragraph at lines 122--128
+[]\OT1/cmr/m/n/12 a) Focus- this ac-tively moves the three fo-cus ac-tu-a-tors 
+a pre-de-fined amount.
+ []
+
+
+Overfull \hbox (11.15002pt too wide) in paragraph at lines 143--150
+[]\OT1/cmr/m/n/12 For ref-er-ence, in Jan-uary 2004, good fo-cus was A=2.237, B
+=2.217, C=2.309.
+ []
+
+[3]
+Overfull \hbox (94.36456pt too wide) in paragraph at lines 220--226
+[]\OT1/cmr/m/n/12 READ FILTERS- There's a file on this com-puter, at /home/boko
+bs/90prime/galil/filters.txt
+ []
+
+[4] [5]
+Overfull \hbox (1.32341pt too wide) in paragraph at lines 349--352
+[]\OT1/cmr/m/n/12 There's a dvd reader/writer. You can use DV-DRECORD or XCDROA
+ST.
+ []
+
+[6]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 390.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 390.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 390.
+
+Overfull \hbox (11.20021pt too wide) in paragraph at lines 392--394
+[]\OT1/cmr/m/n/12 CCD lay-out is found at $\OT1/cmtt/m/n/12 http : / / compton 
+. as . arizona . edu / 90prime / docs /
+ []
+
+
+Overfull \hbox (35.21086pt too wide) in paragraph at lines 397--402
+\OT1/cmr/m/n/12 Windhorst fil-ter curves are found at http://www.noao.edu/noao/
+mosaic/filters.html
+ []
+
+[7] [8] (./90primemanual.aux) ) 
+Here is how much of TeX's memory you used:
+ 650 strings out of 95847
+ 6402 string characters out of 1195948
+ 53661 words of memory out of 1000001
+ 3644 multiletter control sequences out of 10000+50000
+ 8363 words of font info for 30 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 22i,6n,23p,145b,209s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on 90primemanual.dvi (8 pages, 19184 bytes).

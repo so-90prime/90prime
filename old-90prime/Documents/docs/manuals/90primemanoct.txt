@@ -1,0 +1,421 @@
+From edo@adansonia.as.arizona.edu Thu Dec  2 03:12:26 2004
+Date: Wed, 1 Dec 2004 13:27:53 -0700
+From: E. Olszewski <edo@adansonia.as.arizona.edu>
+To: ggwilli@adansonia.as.arizona.edu
+Subject: oct3, 2004, manual words
+
+October 3, 2004
+
+Attempt at a new, possibly even html, manual
+
+
+1) Brief description of 90prime
+
+The SPIE paper by Grant Williams etal, which you
+should read sometime, and which you should reference
+as you publish 90prime data, is available
+in various formats here (link to paper)
+
+Please note that there is ZERO 90prime staff. The folks
+who built 90prime and the CCD staff and the operations staff
+will help you, but we hope that you'll help us to
+solve problems, and we hope you'll contribute
+knowledge and computer code to make data acquisition
+and analysis and pipelininging more efficient or possible.
+
+90prime is meant to be run remotely, from the control room.
+
+a) although the operator is repsonsible for this, the observer
+should be aware that the 90prime dewar is to be filled daily.
+The hold time is actually 2 days, but the balance of the
+telescope is thrown off if we don't add nitrogen daily.
+
+b) Filters are not to be changed by observers, period.
+Gary Rosenbaum, Bill Wood, and some others can make the requested
+filter changes. Plan ahead: Bill, for instance, doesn't work
+on Fridays and Saturdays.
+
+Many of our filters reside permanently in filter holders to
+minimize handling of the actual glass. 
+
+Gary Rosenbaum is the only person (with Bill Wood in an emergency)
+authorized to put filters into filter holders and remove
+filters from filter holders. Observers simply are not
+authorized to do this.
+
+c) Inside the control room, the observer needs to know
+how to start up the CCD computer (BokCCD2) and how to
+ensure that the CCD program is happily running.
+
+d) Most of what the observer does happens when they are sitting
+at the consle of the data computer Stjukshon (to be renamed Bok
+when the old Sun computer Bok is permanently turned off
+and its IP address freed up).
+
+The observer needs to know how to start the AzCam server (CCD data
+taking), how to set parameters within it, and how to set
+up the dataserver daemon.
+
+The observer needs to know how to start the 90prime Instrument GUI
+program, and how to manipulate filters and focus.
+
+The observer needs to know IRAF or some such language to make
+decisions about data quality.
+
+The observer needs to know about the autoguider routines although
+actual autoguiding rests largely in the hands of the telescope
+operator.
+
+The observer needs to know how to put data on tape or DVD or CD.
+
+e) The observer needs to know that, at this moment, the only choices
+for good flatfields are twilight flats or dark-sky flats.
+Our current dome flats are not adequate. There are important
+consequences for getting such data in bad conditions, or in trying
+to use "too many filters."
+
+f) These are thinned CCDs, so they fringe in the red. The observer
+has to take adequate data to allow them to remove fringing.
+At this moment, we don't know if it's possible to build up
+a library of fringe frames that will work from run to run.
+
+This manual will discuss all of these issues in detail.
+
+
+2) Quick (shorthand) startup instructions for CCD computer
+   and Data computer and autoguider computer
+
+xxxxxxxx
+
+3) CCD information
+
+There are four Fairchild 485 CCDs in the dewar, 4096x4096 15 micron
+pixels each, with approximately 1000 pixel gaps between CCDs.
+
+Each CCD is read out through 2 amps, giving 8 total channels,
+which are stored as a single FITS multi-extension file.
+At this moment, we urge you to consult the NOAO IRAF MSCRED
+pages/manuals, and to say "help mscguide" within IRAF
+for how best to manipulate/reduce these data.
+
+Readout time (time to put the data in memory on
+the CCD computer) is 50 seconds. Additional time of about 30 seconds is
+needed to de-interlace the data, to create fits, and to place it
+on the data computer. So the total "readout time" is about
+90 seconds. We are exploring ways to drop this time to about
+70 seconds, but can think of no way to go faster except to
+buy more channels for the CCD electronics.
+
+The approximate scale is 0.45 arcsec/pixel, though at this point
+the astronomer should check this number themselves.
+
+The dewar is filled once daily, although the hold time
+is about 2 days. Enough nitrogren boils off in one day
+to affect the balance of the telescope.
+
+Mike Lesser has set up the CCDs in the lab. He notes
+the following characteristics (but astronomers are encouraged
+to derive any of these numbers for themselves, see the link HERE):
+
+a) photons/data-number is approximately 1.7. A file is
+available HERE (and will soon be in the data header as well)
+to see the numbers for each of the 8 amps.
+
+b) Readnoise is about 12 electrons. As above, the
+individual numbers for each amp are available HERE.
+
+c) Saturation occurs at about 70k ELECTRONS.
+   Actually, Chip4 saturates first, at about 60k electrons,
+   so to be safe, keep your data below about 33,000 data numbers.
+   (there is also a "zero level", zero plus overscan, to remember)
+
+   You can determine for yourself if you can go above 33k DN
+   if you ignore chip 4. 
+
+d) data are linear up to saturation.
+
+e) At the moment, we give you 20 columns of overscan
+per amp. This number is easy to change, but all the consequences
+of it (keywords and such) have never been tested.
+
+f) Dewar temperature should be -187; camera temperature should
+be -102.
+
+g) Dark current is small, and was unmeasurable in the lab.
+
+
+Other CCD issues
+
+a) At the moment you cannot read out just one chip (note that
+the readout time for one chip is the same as for 4). If
+one-chip-read is deemed to be popular, we'll have to create special
+code to do that.
+
+b) At the moment, we do not allow region of interest readout.
+There are interesting consequences for reagion-of-interest in 
+multi-chip, multi-amp readouts. Mike Lesser can explain
+it in more detail.
+
+c) Yes, you can bin, it's easy to do. But all of the
+display keywords will be wrong at this moment.
+
+d) The shutter can be seen in the following DOCUMENT. It is
+designed to give the identical exposure time across the field,
+there is no shutter equation (but if your data depend
+critically on it, talk to us). DO NOT TAKE JILLIONS
+OF SHUTTER TIMING TESTS. Minimum shutter time is of order
+0.1 seconds, maybe shorter.
+
+e) There is crosstalk between amps on an individual CCD.
+So you'll see a ghost image of a bright star on
+the other half of the CCD. There are routines for removing
+crosstalk. We do not have it well characterized at this point.
+
+
+
+4) Filters
+
+We reiterate what is said in section 1: NO OBSERVER MAY
+CHANGE FILTERS. PLAN AHEAD. ONLY Gary Rosenbaum may
+put filters into filter holders.
+
+90prime uses 6" filters (6.0 x 6.0 inch square filters), 12mm
+in thickness, 5.75" active area. This is slightly larger
+than the NOAO mosaics. 
+
+Anyone wanting to use smaller filters should see us, WELL IN ADVANCE,
+for the autocad drawings for them to make filter inserts. Given
+the large gap between CCDS, on must think carefully about
+the positioning of undersized filters.
+
+We currently own the following xx 6" filters, which live
+permanently at 90prime, in their own named filter holders:
+
+a) UBVRI (the Bessell prescription, with "Cousins" R and I of course)
+b) SDSS u' g' r' i' z' 
+c) Washington C M DDO51
+
+[Note that Xiaohui Fan bought 4 of these filters, Olszewski
+bought 4, Olszewski and Bechtold bought 1, NAU bought 1, Operations
+bought 1, and the money for 2 came from xxxx]
+
+In addition, Rogier Windhorst has loaned his set of XX BATC filters (LINK),
+which are 5.75" in size. These filters live in their protective
+boxes and are loaded into special 5.75" holders when needed. PLAN AHEAD.
+In addition, Windhorst can choose to use the filters at some other
+telescope (NOAO, Palomar, etc), so if you choose to use them,
+checking with him in advance for conflicts is imperative.
+
+Finally, there perhaps may be filters owned by individual observers
+that you can borrow. 
+
+
+
+5) Archiving data
+
+Stjukson contains provisions for the following archiving possibilities.
+Note that we DO NOT "save the bits" as an institution. It should
+be the case that your data will not need to be removed right away,
+but on a long 90prime run data from the beginning of the run may
+need to be removed. So check your archival media at home as soon
+as possible. 
+
+There is a DAT4 drive, called /dev/st0 (regular, non-compressed)
+or /dev/st0m (hardware compression). It of course senses whether
+you've put a DAT4, DAT3, DAT2, or DAT1 tape in it. YOU MUST
+PROVIDE YOUR OWN TAPES.
+
+There is a DVD drive. You access the drive using the XCDROAST
+program, which has a gui interface. Make sure you know how to use
+XCDROAST in advance of your run. 
+
+The drive allows the use of the following sorts of DVDr's
+xxxxxxx
+
+There is also a CD writer, but it's defunct now that stjukshon
+is in the rack. We'll be buying one that allows sideways mounting.
+
+There is also a connection for a Firewire external drive and
+a USB external drive. Again, now that it's raqck mounted, getting
+to the connections is hard. Jeff Rill will be providing a junction
+box. 
+
+6) Computers
+
+BokCCD2 (the CCD computer) is a Windows PC that controls
+the CCD controller. Astronomers are not to use it beyond
+what's needed for observing (when all is well, you never
+even look at that computer).
+
+Stjukshon has a RAID array (software RAID) with 5 60Gig
+SCSI disks... 282 Gigs useful size.
+
+7) How to start up the needed computers and GUIs
+
+BokCCD2 boots up running the 90prime server. As long
+as it's running, you're good. If you get an error
+message talking about AzCam vi's, see if BokCCD2
+has hung. If you can move the cursor, you can try killing
+the 90prime server and restarting it with the icon.
+That often doesn't work, and you need to reboot using the
+START button on the lower left. Even more extreme is a hard
+reboot, done by holding in the power switch for 5 seconds till
+the computer powers down, then restarting it.
+
+Stjukshon, the Linuc PC running under Fedora, should always
+be running, and should not be rebooted by anyone other
+than the Computer Support Group. Besides IRAF, you need the
+following:
+
+a) 90prime instrument gui (icon on left). This controls 90prime
+itself.
+
+b) AzCam tool gui (icon on left). This controls the CCD data
+taking.
+
+c) In any terminal window type "dataserver". This brings up
+a ds9 window and establishes communication with BokCCD2.
+[You can then minimize that terminal window]
+
+More information about USING these GUIs will be found below.
+
+In addition, communication to the operator's TCS computer
+(telescope control software) is done through the autoguider
+computer on the operator's console. Make sure that "telcom
+server" is running. The operator can set up the guider
+for you.
+
+
+8) Short cheat sheet on AZCAM GUI
+
+The purpose of this section is to remind you what to do,
+not to tell you in great detail how to do it.
+
+a) In a regular window, mkdir the directory to which you want data sent.
+
+   Then click FILENAME on the gui. It'll allow you
+   to pick that directory, so that BokCCD2 can write into that
+   directory on stjukshon. It'll also allow you
+   to set up a root filename, add a sequence number to that name,
+   and other naming things. You can also check the generic
+   "test.fits" choice, and your data will be written (and overwritten)
+   into that file.
+
+b) Anything in YELLOW is changeaqble by an astronomer.
+   Basically, you're concerned about Object and Exposure,
+   and Title.
+
+   Then you press EXPOSE and off you go.
+
+c) During an exposure, hitting EXPOSE button again invokes
+   a PAUSE sequence. Several options are available.
+
+d) One of the choices for OBJECT is FOCUS. Choosing imagetype
+   of FOCUS, then hitting EXPOSE, will invoke a special
+   FOCUS POPUP which allows you to set those extra parameters.
+
+e) You can also click on SEQUENCE (just to the right of FILENAME)
+   for a simple observing sequence of, say, 3 identical exposures.
+   [We do not yet have the equivalent of the famous 4shooter
+    "dinner" command that allowed multiple sequences in different
+    filters, and with differing exposure times, to be invoked.]
+
+f) There are other useful buttons on the left side. One that
+   you should know about is "INSTRUMENT". In that popup you'll
+   note that there exists a filename for translation of filter
+   number to filter name IN THE HEADER of the FITS file.
+   "filters.txt" is the default.
+
+g) One aspect of this GUI that is seemingly weird isw that you need to
+   close any popups before exposing. Trust us on this one.  This
+   differs from the other gui! [Don't ask why, it's a subtle bug of
+   some sort.]
+
+9) Cheat Sheet on 90prime Instrument GUI
+
+   There are 4 main tabs: Focus, Filter Wheel, Guide Camera, Misc.
+
+   Let's start with Filter Wheel Tab:
+   a) Whenever filters have been changed, you need to edit
+      /home/primfocus/90prime/galil/filters.txt
+      This file, the same one used by the AzCam program, is
+      used to allow the astronomer to see real filter names
+      rather than filter numbers. [We note that filter
+      numbers are encoded on the filter holders themselves
+      and sensed by the software.]
+
+   b) Hit the CONTROL button. It'll bring up a pop-up.
+      You can leave this popup open forever.
+
+   b) On power-up, you'll need to do the following in this tab:
+      Initialize Filters (this allows the software to read filter numbers)
+
+      Read filters (this tells the software the correlation between
+       filter number and real filter name)
+
+      Once you've done both of these steps, the red bar will be green
+      with a filter name in it. This means that that particular
+      filter is ready to be slid into the beam.
+
+      We remind you here that choosing a filter is divided into
+      two steps: rotating the wheel, and then sliding the filter
+      into the beam. At some point these will be combined into
+      one step.
+
+   c) Rotating and sliding
+      There are two buttons: ROTATE and SLIDE
+
+     ROTATE is self explanatory. Watch for the little centered pop-up.
+
+     SLIDE needs one explanation. The bar is GREEN when it's
+     safe to slide in, ORANGE while the filter is sliding, and
+     YELLOW when the filter is in the beam. After initializing,
+     described above, any RED bar is BAD.
+
+     If you get RED while sliding in, slide out and try again.
+     If you still get RED, call Gary Rosenbaum.
+
+ 
+     Now the FOCUS tab
+
+     Start by clicking the NOMINAL PLANE button. This ensures
+     that actuators A B C are set to their nominal differences,
+     ie, that the CCD focal plane is perpendicular to the beam.
+
+     Do a focus sequence. Derive the best focus. Your focus
+     sequence is in STEPPER MOTOR STEPS, so you know how many
+     stepper motor steps to move the focus to get best focus.
+     [It's a relative number from where you are, NOT an absolute
+      number.]
+
+     Type that number in to STEPS A B C (if the LINK button
+     is on, typing into B and a carriage return gives you
+     A B C identically). Then hit the FOCUS button.
+
+     So presumably,you're at good focus with the optimal
+     differences between A B C maintained. Hit the SET REFERENCES
+     button to remember this value.
+
+     As the telescope moves in the sky, the instrument flexes.
+     So the stepper motors flex, and you'll never know!
+     We added absolute encoders, called LVDTs, to sense
+     this flexure. So if your LVDT readings are different
+     from what you saved by setting references, hit RESTORE
+     FOCUS to unflex the instrument. RESTORE FOCUS drives
+     the LVDTs to their correct value, thus overcoming the
+     flexed stepper motors.
+
+
+     So a typical focus and observe routine might be:
+     NOMINAL PLANE, followed by a focus routine with AzCam server,
+     followed by a setting of best focus using the FOCUS key,
+     followed by SET REFERENCES,follwed by observing and 
+     RESTORE FOCUS. We recommend RESTORE FOCUS before each
+     exposure begins.
+
+
+The Autoguider tab
+xxxx
+
+The MISC tab
+xxxx

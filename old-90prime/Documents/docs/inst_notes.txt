@@ -1,0 +1,11 @@
+Important Notes for 90prime Instrument Scientists.
+
+1. After loading filters using the manual rotation button, rotating the 
+wheel "1" position with the instrument control software will put the
+last load position to the insert position.
+	Tech Note: This can also be done by sending the following commands
+	to the Galil:
+
+	NROT=1
+	NROT=?
+	XQ #FILTROT

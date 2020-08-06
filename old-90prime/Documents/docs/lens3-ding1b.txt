@@ -1,0 +1,16 @@
+From Tuell@optics.Arizona.EDU Fri Jan  4 14:48:42 2002
+Date: Fri, 30 Mar 2001 11:13:29 -0700
+From: Michael Tuell <Tuell@optics.Arizona.EDU>
+To: 'G. Grant Williams ' <ggwilli@compton.as.arizona.edu>
+Subject: RE: Lens 3.
+
+ Grant,
+
+Yes, the hole is in the glass.
+
+It happened during fabrication.  It was probably the pin slipping out of the
+tooling and impacting the surface.  The hole is about 1.75" from the edge,
+3/32" across and 1/32" deep.  It appears to have been drilled out after the
+damage occured.
+
+Mike

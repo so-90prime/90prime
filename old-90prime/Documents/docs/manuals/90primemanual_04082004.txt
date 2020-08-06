@@ -1,0 +1,93 @@
+Important Notes for 90prime Observers.
+
+1. Starting the Guider:
+	On the operators left computer click on the Telcom Server icon.
+This will start communications with the telescope.
+	Click on the AzCam Server to start communications between the
+the camera server and the computer.
+	Click on the SO Guider.tcl icon.  This will start the guider
+software.
+
+2. Starting the AzCam Tool:
+	The rack mounted 90PRIMECCD (BOKPC2?) should be running.
+	The 90prime Cserver should be running on the desktop (this is
+the replacement for the AzCam Server).
+	Click on the AzCam Tool icon in the upper right hand corner
+of the desktop.
+	That brings up a configuration file window "AzCam Configuration".
+	The default file is 90prime.ini but you can also "Select..." 
+Devices in the ring menu, choose 90prime.
+	Click on the "Read" button.
+	Click on "Exit"
+	A window will appear briefly while the GUI connects to the server.
+	Set the detector binning.  Click on "Detector".  In the "Readout
+Format" tab click on column bin and row bin to set them to your desired 
+binning. Click on "Set Formats" and then "Exit".
+	Change the filename to make sure data is transfered to stjukshon 
+properly.  In the main AzCam Tool click on "Change Filename".  The 
+directory "Z:" points to stjukshon:/data/bokobs/.  Use the folder button
+to select a folder on stjukshon.  The sub-directory must exist on
+stjukshon or you must first "mkdir" to create it.  You'll need to
+enter a username and password at this point; if you don't know it call Ed.
+	In the same window you can change the root name and the sequence
+number for your data.  As a typical set-up choose "Auto Increment Sequence"
+and "Include Sequence Number".  "Auto Name" uses the root name and the
+image type in the filename.  The filename corresponding to your set-up
+will display at the bottom of that window. Click "Exit".
+	Make sure "Save Image" is selected in the main AzCam window.
+	Click on "Preferences".  In addition to the default preferences
+you may want to choose "Prompt for Image Title".  Alternatively you
+can type the image title in the main AzCam window.  Do NOT choose
+"Display with ds9" because you'll be viewing the data on stjukshon. In
+the "Parameters" tab set the number of images to observe in a sequence
+of exposures (focus sequence, n consecutive exposures of a specific type).
+More information about sequences is given in the discussion on exposures.
+	Take an exposure.  Click on "Image Type" to select image type.
+Select exposure time with the increment buttons or by highlighting and
+replacing hours, minutes, and/or seconds.  Click on "Expose".  The
+progress bar and the 90prime Cserver will display the progress.  The 
+data is assembled on the CCD computer but saved only to stjukshon. 
+	
+	To take sequence of images:
+	If you pick image type "focus" it automatically starts a
+sequence which is actually a multiple shifted exposure on one image.
+More information is provided in the focus discussion below.  For any 
+other image type such as "zeros", choose "Sequence" and then "Expose".
+The "Messages" window shows the current image number in the sequence. 
+To stop a sequence 
+	During an exposure you can hit the "Pause" button (which replaces
+the "Expose" button) to pause an exposure.  You can then either "Resume"
+to continue the exposure, "Stop" to truncate the exposure, or "Abort" 
+to abort the exposure.
+	You can only edit text in yellow text boxes.
+
+3. There are 5.29 microns per focus step.  Typical focus increments of 
+50 are good to use for a very coarse focus sequence and 20 or 25 (depending
+on seeing) for a fine sequence.  A crucial test for focus is whether you
+see any astigmatism (residual in the system).
+
+4. To put an object in the guide camera:
+	From 3993, 3868 on chip 1
+	offset 328 arcsec west
+	and 3123 arcsec North
+	to center the object in the guider.
+	
+5. The filter codes for 11/16/03 are:
+
+	Code	Filter		Wheel Position 
+	6	Empty		1
+	2	527 BATC	2
+	3	579 BATC	3
+	4	607 BATC	4
+	5	666 BATC	5
+	6	337 BATC	6
+
+6. The guider filters for 11/16/03 are:
+
+	Position	Color
+	1		Empty
+	2		Red
+	3		Neutral
+	4		Empty
+	5		Green
+	6		Blue
