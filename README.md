@@ -18,7 +18,7 @@ To report hardware issues or concerns, **please** file an issue in the "Issues" 
 [Link for the lazy](https://github.com/so-90prime/90prime/issues)
 
 ### Software Issues
-To report software issues or concerns, please take a look through the "so-90prime" organization and find the appropiate software page to post an issue. If you are not able to find the appropiate repo, feel free to post it in this one (90prime) and we will move it to the correct location. 
+To report software issues or concerns, please take a look through the "so-90prime" organization and find the appropriate software page to post an issue. If you are not able to find the appropriate repo, feel free to post it in this one (90prime) and we will move it to the correct location. 
 
 
 
