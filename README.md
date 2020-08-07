@@ -11,6 +11,11 @@ Think of this repository as the hub of the 90prime overhaul. There is no such th
 
 Currently, we are **not** using the Wiki page or Projects. 
 
+## Meeting Notes
+Here is a link to the Google Drive folder containing meeting notes and agendas.
+
+[Google Drive folder with Meeting Notes](https://drive.google.com/drive/folders/1d3r8hToeyFmGPF7vxssgVWzWuUQVDQx-?usp=sharing)
+
 ## Reporting Issues
 ### Hardware Issues
 To report hardware issues or concerns, **please** file an issue in the "Issues" tab above in this (90prime)  repository. 
