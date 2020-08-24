@@ -26,4 +26,6 @@ To report hardware issues or concerns, **please** file an issue in the "Issues" 
 To report software issues or concerns, please take a look through the "so-90prime" organization and find the appropriate software page to post an issue. If you are not able to find the appropriate repo, feel free to post it in this one (90prime) and we will move it to the correct location. 
 
 
+### Note on github and contributing Issues
+Dan Avner wrote a quick note for people new to github, and I have put it [here](https://github.com/so-90prime/90prime/wiki/How-to-for-those-new-to-github-(from-Dan)).
 
