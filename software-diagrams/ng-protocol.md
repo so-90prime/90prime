@@ -1,7 +1,7 @@
 # NG Protocol COMMANDS/REQUESTS - 90Prime
 All available commands and requests to control 90prime filter box. 
 
-** This documentation will be evolving over time and is not finalized. **
+**This documentation will be evolving over time and is not finalized.**
 
 ## Quickstart
 To get the current LVDT values from 90Prime.
