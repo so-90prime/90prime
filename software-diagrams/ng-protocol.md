@@ -4,16 +4,18 @@ All available commands and requests to control 90prime filter box.
 **This documentation will be evolving over time and is not finalized.**
 
 ## Quickstart
+The examples below are using bash to echo a command over to the indiserver listening on port 5750 on localhost (assuming this is run from the 90Prime control computer). 
+
 To get the current LVDT values from 90Prime.
 ```console
 dan@lump: ~
-$ echo "BOK 90PRIME 123 REQUEST LVDT" | nc localhost 5750
+$ echo "BOK 90PRIME 123 REQUEST LVDT\r\n" | nc localhost 5750
 BOK 90PRIME 123 -700 -900 -500
 ```
 Tell 90Prime to change filters to filter in position 0
 ```console
 dan@lump: ~
-$ echo "BOK 90PRIME 123 COMMAND FILTER CHANGE 0" | nc localhost 5750
+$ echo "BOK 90PRIME 123 COMMAND FILTER CHANGE 0\r\n" | nc localhost 5750
 BOK 90PRIME 123 OK
 ```
 
