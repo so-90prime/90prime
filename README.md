@@ -16,6 +16,11 @@ Here is a link to the Google Drive folder containing meeting notes and agendas.
 
 [Google Drive folder with Meeting Notes](https://drive.google.com/drive/folders/1d3r8hToeyFmGPF7vxssgVWzWuUQVDQx-?usp=sharing)
 
+## Commissioning Brainstorming Document
+Here is a link to the Google doc where we are collecting commissioning plans and thoughts.
+
+[Google doc for Commissioning Planning](https://docs.google.com/document/d/1jDwWePO2ypcHgD6iz4fdWvZyGj8qk6sbYi4bF4p8Dr0/edit?usp=sharing)
+
 ## Reporting Issues
 ### Hardware Issues
 To report hardware issues or concerns, **please** file an issue in the "Issues" tab above in this (90prime)  repository. 
