@@ -21,6 +21,11 @@ Here is a link to the Google doc where we are collecting commissioning plans and
 
 [Google doc for Commissioning Planning](https://docs.google.com/document/d/1jDwWePO2ypcHgD6iz4fdWvZyGj8qk6sbYi4bF4p8Dr0/edit?usp=sharing)
 
+## Observer Reporting on 90prime focus
+Here is a link to the Google doc where we are collecting thoughts and anecdotes from 90Prime observers
+
+[Google doc for Observer Experiences](https://docs.google.com/document/d/1hmYqr_mcSZVd1pZQhAmtz7jvWKCGJlr28QwoG65hDU0/edit?usp=sharing)
+
 ## Reporting Issues
 ### Hardware Issues
 To report hardware issues or concerns, **please** file an issue in the "Issues" tab above in this (90prime)  repository. 
