@@ -16,6 +16,12 @@ Here is a link to the Google Drive folder containing meeting notes and agendas.
 
 [Google Drive folder with Meeting Notes](https://drive.google.com/drive/folders/1d3r8hToeyFmGPF7vxssgVWzWuUQVDQx-?usp=sharing)
 
+## 90Prime Operations Plan
+Here is a link to the Google doc with the evolving 90Prime Operations Plan.  The goal of this document is to explicate how scientists will use and interact with the upgraded 90Prime.
+
+[Google doc for 90Prime Operations Plan](https://docs.google.com/document/d/1OZaBQWCWEBuuUef1vsO267xQi8jbTqFPYP6kNZargxA/edit?usp=sharing)
+
+
 ## Commissioning Brainstorming Document
 Here is a link to the Google doc where we are collecting commissioning plans and thoughts.
 
