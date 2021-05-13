@@ -1,0 +1,7 @@
+All
+
+I couldn't find the production drawings for the brass insert/extraction blocks (that shed the brass dust).  I have reverse-designed them and have a usable model now.  In researching the materials available, the best bronze alloy for the new blocks would be an aluminum-bronze alloy called Ampco 18.  Very tough, low wear rates and still machinable. Unfortunately, the stocking supplier for this alloy is Morgan Bronze Products in Illinois. We don't have enough of a material requirement to justify their minimum order.
+
+The next best alloy, and a very close cousin to 18, is C95400.  This is a material we can get through McMaster.  This alloy is intended for use in wear-exposed environments and should eliminate the shedding problems.
+
+5/8" x 3" bar will be required. It's roughly $70 per foot.  I don't know how many slides 90-Prime has.
