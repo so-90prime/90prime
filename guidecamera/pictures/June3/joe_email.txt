@@ -1,0 +1,13 @@
+Hi All,
+
+Took some more pictures from yesterday which are attached.
+-Measurement from guider main plate to camera mount inside is approximately 2.5" 
+-Noted piece of glass at angle between guider ccd window and filter (not the pic off mirror). Needs to be cleaned
+-Looks like people have been using the system with a filter in place.
+-Filter looks like it is delaminating. We should remove filters and inspect them. You can see what looks like separation between layers on the filter.
+-Included a pic of guider focus gui
+-Could not find the guider FW gui on AzCam guider PC although I didn't have too much time to look. Would be cool to rotate filter wheel and see what all is in it.
+-In my opinion filter wheel should be taken out so filters can be cleaned unless we move to an open slot
+Cheers,
+
+Joe
