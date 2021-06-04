@@ -1,0 +1,41 @@
+Hi Folks,
+
+ 
+
+I have finished my first round of USB-ethernet testing for the new CMOS guider.  The situation is not ideal so I will keep working for a better solution.  Here is the basic story…
+
+ 
+
+The latest generation of reasonable cost CMOS cameras tend to have USB3 ports for control and image acquisition. Ideally we would have a simple USB3-ethernet converter box located near the camera and then access the guiders over ethernet.  For 90prime, Joe and I believe the best location for the conversion is the North plate.  The current plan to buy a 3m USB3 cable and run it from the new guider to the North plate and do the conversion there.
+
+ 
+
+I purchased and tested three converters:
+
+ 
+
+Digi AnywhereUSB® Plus - https://www.digi.com/products/networking/infrastructure-management/usb-connectivity/usb-over-ip/anywhereusb
+
+AnyplaceUSB-S4 - https://www.titan.tw/product/anyplaceusb-s4/
+
+AnyplaceSUB-H3 - https://www.titan.tw/product/anyplaceusb-h3/
+
+ 
+
+The first two would be preferred, they are just boxes which convert USB3 to ethernet. But neither of them work well enough, they drop many frames and cannot operate the fast cameras reliably.  It is not just the selected frame time, the camera puts out a lot of data quickly, so even when binned and with long exposure times the boxes hang, they and always lose many frames. This is somewhat surprising since the converters supposed handle standard USB3 speeds and the camera conforms to the USB3 spec, but it is clear in operation that there is a problem.  I tested a “slower” camera I have here and it worked fine, so the issue is really the high speed of the modern cameras.
+
+ 
+
+The third box works OK but requires a PC (which would be out at the North plate).  The AnyplaceSUB-H3 plugs into that PC’s USB3 port and software runs on the PC.  The camera can be “shared” to any other machine on the network running the client software (Windows, Linux, and MacOS supported).  This mode works well enough.  Last night I took 30,000 images and had about 15 dropped frames.
+
+ 
+
+I think the latest Raspberry PI supports USB3 so that might be a possibility, I will look into this.
+
+ 
+
+For PHD2 testing and development I would plug the camera right into the computer being used for development while we come up with a final solution for mountain operation.
+
+ 
+
+-Mike
