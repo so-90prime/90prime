@@ -16,6 +16,12 @@ Here is a link to the Google Drive folder containing meeting notes and agendas.
 
 [Google Drive folder with Meeting Notes](https://drive.google.com/drive/folders/1d3r8hToeyFmGPF7vxssgVWzWuUQVDQx-?usp=sharing)
 
+## Engineering run logs and old 90Prime documentation and how-to's
+
+Link to google drive folder with engineering run notes, 90Prime manuals, etc.
+
+[Google Drive with Engineering and 90Prime documentation](https://drive.google.com/drive/folders/1oJYdrLJtzafNIlKiJJY5iixoe2Aidl4F?usp=sharing)
+
 ## 90Prime Operations Plan
 Here is a link to the Google doc with the evolving 90Prime Operations Plan.  The goal of this document is to explicate how scientists will use and interact with the upgraded 90Prime.
 
