@@ -38,6 +38,10 @@ Here is a link to the Google doc where we are collecting thoughts and anecdotes 
 
 [Google doc for Observer Experiences](https://docs.google.com/document/d/1hmYqr_mcSZVd1pZQhAmtz7jvWKCGJlr28QwoG65hDU0/edit?usp=sharing)
 
+## Original 90Prime paper for easy reference
+
+[90Prime SPIE paper](https://github.com/so-90prime/90prime/blob/master/old-90prime/Documents/SPIE_90prime.pdf)
+
 ## Reporting Issues
 ### Hardware Issues
 To report hardware issues or concerns, **please** file an issue in the "Issues" tab above in this (90prime)  repository. 
